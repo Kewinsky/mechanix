@@ -1,6 +1,6 @@
 package com.mechanix.mechanix.controllers;
 
-import com.mechanix.mechanix.exceptions.product.ProductNotFoundException;
+import com.mechanix.mechanix.exceptions.customerDetails.DetailsNotFoundException;
 import com.mechanix.mechanix.models.CustomerDetails;
 import com.mechanix.mechanix.payloads.requests.models.UpdateDetails;
 import com.mechanix.mechanix.repositories.CustomerDetailsRepository;
@@ -20,7 +20,7 @@ public class CustomerDetailsController {
     @GetMapping(path="/getDetails")
     CustomerDetails getDetails() {
         return customerDetailsRepository.findById(USER_ID)
-                .orElseThrow(() -> new ProductNotFoundException(USER_ID));
+                .orElseThrow(() -> new DetailsNotFoundException(USER_ID));
     }
 
     @PostMapping(path="/addDetails")
@@ -31,7 +31,7 @@ public class CustomerDetailsController {
     }
 
     @PutMapping("updateDetails")
-    String updateProduct(@RequestBody UpdateDetails details){
+    String updateDetails(@RequestBody UpdateDetails details){
         return customerDetailsRepository.findById(USER_ID)
                 .map(details1 -> {
                     details1.setFirst_name(details.getFirst_name());
@@ -40,13 +40,13 @@ public class CustomerDetailsController {
                     customerDetailsRepository.save(details1);
                     return "Customer details updated.";
                 })
-                .orElseThrow(() -> new ProductNotFoundException(USER_ID));
+                .orElseThrow(() -> new DetailsNotFoundException(USER_ID));
     }
 
-    @DeleteMapping("/deleteProduct/{id}")
-    String deleteProduct(@PathVariable Long id) {
+    @DeleteMapping("/deleteDetails/{id}")
+    String deleteDetails(@PathVariable Long id) {
         if (!customerDetailsRepository.existsById(id)){
-            throw new ProductNotFoundException(id);
+            throw new DetailsNotFoundException(id);
         }
         customerDetailsRepository.deleteById(id);
         return "Customer details deleted.";
