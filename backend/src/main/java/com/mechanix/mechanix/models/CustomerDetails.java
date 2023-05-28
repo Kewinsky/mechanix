@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @Table(name = "customer_details")
-public class CustomerDetail {
+public class CustomerDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,7 +20,7 @@ public class CustomerDetail {
 
     private String telephone;
 
-    public CustomerDetail(String first_name, String lats_name, String telephone) {
+    public CustomerDetails(String first_name, String lats_name, String telephone) {
         this.first_name = first_name;
         this.lats_name = lats_name;
         this.telephone = telephone;

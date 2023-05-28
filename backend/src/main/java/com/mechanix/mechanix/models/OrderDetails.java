@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Entity
 @NoArgsConstructor
 @Table(name = "order_details")
-public class OrderDetail {
+public class OrderDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,7 +27,7 @@ public class OrderDetail {
 
     private LocalDate created_at;
 
-    public OrderDetail(Long user_id, float total, EPaymentType payment_type, String status, LocalDate created_at) {
+    public OrderDetails(Long user_id, float total, EPaymentType payment_type, String status, LocalDate created_at) {
         this.user_id = user_id;
         this.total = total;
         this.payment_type = payment_type;
