@@ -11,7 +11,7 @@ public class ProductNotFoundAdvice {
     @ResponseBody
     @ExceptionHandler(ProductNotFoundException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    String expenseNotFoundHandler(ProductNotFoundException ex) {
+    String productNotFoundHandler(ProductNotFoundException ex) {
         return ex.getMessage();
     }
 }

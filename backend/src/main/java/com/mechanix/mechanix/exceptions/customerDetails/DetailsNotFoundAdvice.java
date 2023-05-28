@@ -11,7 +11,7 @@ public class DetailsNotFoundAdvice {
     @ResponseBody
     @ExceptionHandler(DetailsNotFoundException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    String expenseNotFoundHandler(DetailsNotFoundException ex) {
+    String detailsNotFoundHandler(DetailsNotFoundException ex) {
         return ex.getMessage();
     }
 }

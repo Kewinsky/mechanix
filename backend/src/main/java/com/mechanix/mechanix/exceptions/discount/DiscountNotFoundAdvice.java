@@ -11,7 +11,7 @@ public class DiscountNotFoundAdvice {
     @ResponseBody
     @ExceptionHandler(DiscountNotFoundException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    String expenseNotFoundHandler(DiscountNotFoundException ex) {
+    String discountNotFoundHandler(DiscountNotFoundException ex) {
         return ex.getMessage();
     }
 }

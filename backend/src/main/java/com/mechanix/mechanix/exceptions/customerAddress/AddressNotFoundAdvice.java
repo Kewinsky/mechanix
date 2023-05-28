@@ -11,7 +11,7 @@ public class AddressNotFoundAdvice {
     @ResponseBody
     @ExceptionHandler(AddressNotFoundException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    String expenseNotFoundHandler(AddressNotFoundException ex) {
+    String addressNotFoundHandler(AddressNotFoundException ex) {
         return ex.getMessage();
     }
 }
