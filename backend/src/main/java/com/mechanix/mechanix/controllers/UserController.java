@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/user")
 public class UserController {
 
-    private static Long  USER_ID = 2L;
+    private static final Long  USER_ID = 2L;
 
     @Autowired
     private UserRepository userRepository;
