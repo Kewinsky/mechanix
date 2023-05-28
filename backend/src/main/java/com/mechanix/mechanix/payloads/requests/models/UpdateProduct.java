@@ -1,4 +1,4 @@
-package com.mechanix.mechanix.payloads.requests.product;
+package com.mechanix.mechanix.payloads.requests.models;
 
 import com.mechanix.mechanix.models.enums.ECategory;
 import lombok.AllArgsConstructor;
