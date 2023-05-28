@@ -1,16 +1,28 @@
 package com.mechanix.mechanix.models;
 
+import com.mechanix.mechanix.models.enums.ECategory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "product_categories")
 public class ProductCategory {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Enumerated(EnumType.STRING)
+    private ECategory name;
+
+    private String description;
+
+    public ProductCategory(ECategory name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 }
