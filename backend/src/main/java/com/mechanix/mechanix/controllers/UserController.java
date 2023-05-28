@@ -33,6 +33,19 @@ public class UserController {
                 .orElseThrow(() -> new UserNotFoundException(id));
     }
 
+    // user access
+    @PutMapping("/updateUser")
+    String updateUser(@RequestBody UpdateUser user){
+        return userRepository.findById(USER_ID)
+                .map(user1 -> {
+                    user1.setUsername(user.getUsername());
+                    user1.setEmail(user.getEmail());
+                    userRepository.save(user1);
+                    return "User updated.";
+                })
+                .orElseThrow(() -> new UserNotFoundException(USER_ID));
+    }
+
     @PutMapping("/updateUserByAdmin/{id}")
     String updateUserByAdmin(@RequestBody UpdateUserByAdmin user,
                              @PathVariable Long id){
@@ -54,18 +67,5 @@ public class UserController {
         }
         userRepository.deleteById(id);
         return "User deleted.";
-    }
-
-    // user access
-    @PutMapping("/updateUser")
-    String updateUser(@RequestBody UpdateUser user){
-        return userRepository.findById(USER_ID)
-                .map(user1 -> {
-                    user1.setUsername(user.getUsername());
-                    user1.setEmail(user.getEmail());
-                    userRepository.save(user1);
-                    return "User updated.";
-                })
-                .orElseThrow(() -> new UserNotFoundException(USER_ID));
     }
 }

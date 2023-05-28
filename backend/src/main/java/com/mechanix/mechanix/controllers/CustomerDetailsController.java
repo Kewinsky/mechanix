@@ -19,7 +19,7 @@ public class CustomerDetailsController {
 
     @GetMapping(path="/getDetails")
     CustomerDetails getDetails() {
-        return customerDetailsRepository.findById(USER_ID)
+        return customerDetailsRepository.findByUserId(USER_ID)
                 .orElseThrow(() -> new DetailsNotFoundException(USER_ID));
     }
 
@@ -32,7 +32,7 @@ public class CustomerDetailsController {
 
     @PutMapping("updateDetails")
     String updateDetails(@RequestBody UpdateDetails details){
-        return customerDetailsRepository.findById(USER_ID)
+        return customerDetailsRepository.findByUserId(USER_ID)
                 .map(details1 -> {
                     details1.setFirst_name(details.getFirst_name());
                     details1.setLats_name(details.getLats_name());

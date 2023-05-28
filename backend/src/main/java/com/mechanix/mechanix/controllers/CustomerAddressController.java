@@ -22,7 +22,7 @@ public class CustomerAddressController {
 
     @GetMapping(path="/getAddress")
     CustomerAddress getAddress() {
-        return customerAddressRepository.findById(USER_ID)
+        return customerAddressRepository.findByUserId(USER_ID)
                 .orElseThrow(() -> new AddressNotFoundException(USER_ID));
     }
 
@@ -35,7 +35,7 @@ public class CustomerAddressController {
 
     @PutMapping("updateAddress")
     String updateAddress(@RequestBody UpdateAddress address){
-        return customerAddressRepository.findById(USER_ID)
+        return customerAddressRepository.findByUserId(USER_ID)
                 .map(address1 -> {
                     address1.setAddress_line1(address.getAddress_line1());
                     address1.setAddress_line2(address.getAddress_line2());
