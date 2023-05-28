@@ -23,8 +23,8 @@ public class CustomerDetailsController {
                 .orElseThrow(() -> new ProductNotFoundException(USER_ID));
     }
 
-    @PostMapping(path="/addConsumerDetails")
-    String addConsumerDetails (@RequestBody CustomerDetails details) {
+    @PostMapping(path="/addDetails")
+    String addDetails (@RequestBody CustomerDetails details) {
         details.setUser_id(USER_ID);
         customerDetailsRepository.save(details);
         return "Customer details added.";
