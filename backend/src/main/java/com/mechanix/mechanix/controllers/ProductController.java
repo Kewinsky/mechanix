@@ -2,7 +2,7 @@ package com.mechanix.mechanix.controllers;
 
 import com.mechanix.mechanix.exceptions.product.ProductNotFoundException;
 import com.mechanix.mechanix.models.Product;
-import com.mechanix.mechanix.payloads.requests.product.UpdateProduct;
+import com.mechanix.mechanix.payloads.requests.models.UpdateProduct;
 import com.mechanix.mechanix.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +15,9 @@ public class ProductController {
     @Autowired
     ProductRepository productRepository;
 
-    @GetMapping(path="/getAllProducts")
+    @GetMapping(path="/getProducts")
     @ResponseBody
-    Iterable<Product> getAllProducts() {
+    Iterable<Product> getProducts() {
         return productRepository.findAll();
     }
 
@@ -49,6 +49,6 @@ public class ProductController {
             throw new ProductNotFoundException(id);
         }
         productRepository.deleteById(id);
-        return "Product removed.";
+        return "Product deleted.";
     }
 }
