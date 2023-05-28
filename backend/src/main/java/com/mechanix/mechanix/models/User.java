@@ -23,8 +23,6 @@ public class User {
 
     private String email;
 
-    private Long customer_details_id;
-
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(	name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -33,12 +31,9 @@ public class User {
 
     private LocalDate created_at;
 
-    public User(String username, String password, String email, Long customer_details_id, Set<Role> roles, LocalDate created_at) {
+    public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.customer_details_id = customer_details_id;
-        this.roles = roles;
-        this.created_at = created_at;
     }
 }
