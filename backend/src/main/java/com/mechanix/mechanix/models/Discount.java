@@ -21,7 +21,7 @@ public class Discount {
 
     private float discount_percent;
 
-    private boolean active;
+    private Boolean active;
 
     private LocalDate created_at;
 
