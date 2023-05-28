@@ -26,8 +26,8 @@ public class CustomerAddressController {
                 .orElseThrow(() -> new AddressNotFoundException(USER_ID));
     }
 
-    @PostMapping(path="/addConsumerAddress")
-    String addConsumerAddress (@RequestBody CustomerAddress address) {
+    @PostMapping(path="/addAddress")
+    String addAddress (@RequestBody CustomerAddress address) {
         address.setUser_id(USER_ID);
         customerAddressRepository.save(address);
         return "Customer address added.";
