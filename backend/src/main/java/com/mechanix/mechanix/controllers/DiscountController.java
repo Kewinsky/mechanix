@@ -24,6 +24,12 @@ public class DiscountController {
         return discountRepository.findAll();
     }
 
+    @GetMapping(path="/getDiscountById/{id}")
+    Discount getUserById(@PathVariable Long id) {
+        return discountRepository.findById(id)
+                .orElseThrow(() -> new DiscountNotFoundException(id));
+    }
+
     @PostMapping(path="/addDiscount")
     String addDiscount (@RequestBody Discount discount) {
         discountRepository.save(discount);

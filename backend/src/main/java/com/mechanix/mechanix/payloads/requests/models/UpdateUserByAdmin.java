@@ -4,17 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateDiscount {
+public class UpdateUserByAdmin {
 
-    private String name;
+    private String username;
 
-    private String description;
+    private String email;
 
-    private float discount_percent;
-
-    private Boolean active;
+    private Set<String> role;
 
 }
+

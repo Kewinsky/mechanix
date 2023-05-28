@@ -21,6 +21,12 @@ public class ProductController {
         return productRepository.findAll();
     }
 
+    @GetMapping(path="/getProductById/{id}")
+    Product getUserById(@PathVariable Long id) {
+        return productRepository.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException(id));
+    }
+
     @PostMapping(path="/addProduct")
     String addProduct (@RequestBody Product product) {
         productRepository.save(product);

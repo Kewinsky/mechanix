@@ -12,6 +12,7 @@ import javax.persistence.Enumerated;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateProduct {
+
     private String name;
 
     private String description;
@@ -22,4 +23,5 @@ public class UpdateProduct {
     private float price;
 
     private Long discount_id;
+
 }

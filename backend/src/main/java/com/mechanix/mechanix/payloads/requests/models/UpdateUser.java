@@ -1,5 +1,6 @@
 package com.mechanix.mechanix.payloads.requests.models;
 
+import com.mechanix.mechanix.models.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,14 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateDiscount {
+public class UpdateUser {
 
-    private String name;
+    private String username;
 
-    private String description;
-
-    private float discount_percent;
-
-    private Boolean active;
+    private String email;
 
 }
