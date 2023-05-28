@@ -1,4 +1,4 @@
-package com.mechanix.mechanix.exceptions.discount;
+package com.mechanix.mechanix.exceptions.customerAddress;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-public class DiscountNotFoundAdvice {
+public class AddressNotFoundAdvice {
     @ResponseBody
-    @ExceptionHandler(DiscountNotFoundException.class)
+    @ExceptionHandler(AddressNotFoundException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    String discountNotFoundHandler(DiscountNotFoundException ex) {
+    String addressNotFoundHandler(AddressNotFoundException ex) {
         return ex.getMessage();
     }
 }
