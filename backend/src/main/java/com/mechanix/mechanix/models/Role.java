@@ -1,7 +1,6 @@
 package com.mechanix.mechanix.models;
 
 import com.mechanix.mechanix.models.enums.ERole;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
