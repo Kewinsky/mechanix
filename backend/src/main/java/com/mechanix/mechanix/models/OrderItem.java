@@ -11,6 +11,6 @@ import javax.persistence.Table;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "customer_addresses")
-public class CustomerAddress {
+@Table(name = "order_items")
+public class OrderItem {
 }
