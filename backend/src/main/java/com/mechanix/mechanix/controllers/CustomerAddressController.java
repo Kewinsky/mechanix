@@ -34,10 +34,10 @@ public class CustomerAddressController {
     String updateAddress(@RequestBody UpdateAddress address){
         return customerAddressRepository.findByUserId(USER_ID)
                 .map(address1 -> {
-                    address1.setAddress_line1(address.getAddress_line1());
-                    address1.setAddress_line2(address.getAddress_line2());
+                    address1.setAddressLine1(address.getAddressLine1());
+                    address1.setAddressLine2(address.getAddressLine2());
                     address1.setCity(address.getCity());
-                    address1.setPostal_code(address.getPostal_code());
+                    address1.setPostalCode(address.getPostalCode());
                     address1.setCountry(address.getCountry());
                     customerAddressRepository.save(address1);
                     return "Customer address updated.";

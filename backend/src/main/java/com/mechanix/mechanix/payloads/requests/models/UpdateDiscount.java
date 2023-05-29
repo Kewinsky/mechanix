@@ -13,7 +13,7 @@ public class UpdateDiscount {
 
     private String description;
 
-    private float discount_percent;
+    private float discountPercent;
 
     private Boolean active;
 

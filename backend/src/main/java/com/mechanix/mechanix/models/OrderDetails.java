@@ -1,7 +1,9 @@
 package com.mechanix.mechanix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mechanix.mechanix.models.enums.EPaymentType;
 import com.mechanix.mechanix.models.enums.EStatus;
+import com.mechanix.mechanix.utils.RandomIdGenerator;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,26 +15,35 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Table(name = "order_details")
 public class OrderDetails {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
 
+    @JsonIgnore
     private Long userId;
 
     private float total;
 
     @Enumerated(EnumType.STRING)
-    private EPaymentType payment_type;
+    private EPaymentType paymentType;
 
     private EStatus status;
 
-    private LocalDate created_at;
+    @JsonIgnore
+    private LocalDate createdAt;
 
-    public OrderDetails(Long userId, float total, EPaymentType payment_type, EStatus status, LocalDate created_at) {
+    @PrePersist
+    private void generateRandomId() {
+        this.id = RandomIdGenerator.generateRandomId();
+        this.createdAt = LocalDate.now();
+    }
+
+    public OrderDetails(Long userId, float total, EPaymentType paymentType, EStatus status) {
         this.userId = userId;
         this.total = total;
-        this.payment_type = payment_type;
+        this.paymentType = paymentType;
         this.status = status;
-        this.created_at = created_at;
     }
+
 }

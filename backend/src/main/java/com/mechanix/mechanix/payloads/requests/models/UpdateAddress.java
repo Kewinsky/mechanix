@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UpdateAddress {
 
-    private String address_line1;
+    private String addressLine1;
 
-    private String address_line2;
+    private String addressLine2;
 
     private String city;
 
-    private String postal_code;
+    private String postalCode;
 
     private String country;
 

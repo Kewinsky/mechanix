@@ -1,5 +1,6 @@
 package com.mechanix.mechanix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mechanix.mechanix.models.enums.ERole;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "roles")
 public class Role {
+
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -21,4 +24,5 @@ public class Role {
     public Role(ERole name) {
         this.name = name;
     }
+
 }

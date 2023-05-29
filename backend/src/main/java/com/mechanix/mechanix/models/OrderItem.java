@@ -1,5 +1,6 @@
 package com.mechanix.mechanix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +11,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "order_items")
 public class OrderItem {
+
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -25,4 +28,5 @@ public class OrderItem {
         this.productId = productId;
         this.quantity = quantity;
     }
+
 }

@@ -1,5 +1,7 @@
 package com.mechanix.mechanix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.mechanix.mechanix.utils.RandomIdGenerator;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,8 +15,9 @@ import java.util.Set;
 @NoArgsConstructor
 @Table(name = "users")
 public class User {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
 
     private String username;
@@ -29,11 +32,19 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "roleId"))
     private Set<Role> roles = new HashSet<>();
 
-    private LocalDate created_at;
+    @JsonIgnore
+    private LocalDate createdAt;
+
+    @PrePersist
+    private void generateRandomId() {
+        this.id = RandomIdGenerator.generateRandomId();
+        this.createdAt = LocalDate.now();
+    }
 
     public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
         this.email = email;
     }
+
 }

@@ -1,5 +1,6 @@
 package com.mechanix.mechanix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mechanix.mechanix.models.enums.ECategory;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Table(name = "products")
 public class Product {
+
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -27,14 +30,20 @@ public class Product {
 
     private Long discountId;
 
-    private LocalDate created_at;
+    @JsonIgnore
+    private LocalDate createdAt;
 
-    public Product(String name, String description, ECategory category, float price, Long discountId, LocalDate created_at) {
+    @PrePersist
+    private void setCreatedAt() {
+        this.createdAt = LocalDate.now();
+    }
+
+    public Product(String name, String description, ECategory category, float price, Long discountId) {
         this.name = name;
         this.description = description;
         this.category = category;
         this.price = price;
         this.discountId = discountId;
-        this.created_at = created_at;
     }
+
 }

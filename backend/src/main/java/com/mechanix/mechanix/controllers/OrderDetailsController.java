@@ -33,7 +33,7 @@ public class OrderDetailsController {
     String addOrder (@RequestBody OrderDetails order) {
         order.setUserId(USER_ID);
         orderDetailsRepository.save(order);
-        return "Order details added.";
+        return "Order added.";
     }
 
     @PutMapping("updateOrderStatus")
@@ -53,6 +53,6 @@ public class OrderDetailsController {
             throw new OrderDetailsNotFoundException(id);
         }
         orderDetailsRepository.deleteById(id);
-        return "Order details deleted.";
+        return "Order deleted.";
     }
 }

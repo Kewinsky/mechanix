@@ -34,8 +34,8 @@ public class CustomerDetailsController {
     String updateDetails(@RequestBody UpdateDetails details){
         return customerDetailsRepository.findByUserId(USER_ID)
                 .map(details1 -> {
-                    details1.setFirst_name(details.getFirst_name());
-                    details1.setLats_name(details.getLats_name());
+                    details1.setFirstName(details.getFirstName());
+                    details1.setLatsName(details.getLatsName());
                     details1.setTelephone(details.getTelephone());
                     customerDetailsRepository.save(details1);
                     return "Customer details updated.";

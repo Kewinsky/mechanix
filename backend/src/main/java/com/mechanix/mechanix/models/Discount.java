@@ -1,5 +1,6 @@
 package com.mechanix.mechanix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,7 +12,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Table(name = "discounts")
 public class Discount {
+
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -19,17 +22,23 @@ public class Discount {
 
     private String description;
 
-    private float discount_percent;
+    private float discountPercent;
 
     private Boolean active;
 
-    private LocalDate created_at;
+    @JsonIgnore
+    private LocalDate createdAt;
 
-    public Discount(String name, String description, float discount_percent, boolean active, LocalDate created_at) {
+    @PrePersist
+    private void setCreatedAt() {
+        this.createdAt = LocalDate.now();
+    }
+
+    public Discount(String name, String description, float discountPercent, boolean active) {
         this.name = name;
         this.description = description;
-        this.discount_percent = discount_percent;
+        this.discountPercent = discountPercent;
         this.active = active;
-        this.created_at = created_at;
     }
+
 }

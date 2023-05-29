@@ -1,5 +1,6 @@
 package com.mechanix.mechanix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,28 +11,32 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "customer_addresses")
 public class CustomerAddress {
+
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonIgnore
     private Long userId;
 
-    private String address_line1;
+    private String addressLine1;
 
-    private String address_line2;
+    private String addressLine2;
 
     private String city;
 
-    private String postal_code;
+    private String postalCode;
 
     private String country;
 
-    public CustomerAddress(Long userId, String address_line1, String address_line2, String city, String postal_code, String country) {
+    public CustomerAddress(Long userId, String addressLine1, String addressLine2, String city, String postalCode, String country) {
         this.userId = userId;
-        this.address_line1 = address_line1;
-        this.address_line2 = address_line2;
+        this.addressLine1 = addressLine1;
+        this.addressLine2 = addressLine2;
         this.city = city;
-        this.postal_code = postal_code;
+        this.postalCode = postalCode;
         this.country = country;
     }
+
 }

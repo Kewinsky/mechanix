@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UpdateDetails {
 
-    private String first_name;
+    private String firstName;
 
-    private String lats_name;
+    private String latsName;
 
     private String telephone;
 

@@ -1,5 +1,6 @@
 package com.mechanix.mechanix.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mechanix.mechanix.models.enums.ECategory;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "product_categories")
 public class ProductCategory {
+
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -24,4 +27,5 @@ public class ProductCategory {
         this.name = name;
         this.description = description;
     }
+
 }
