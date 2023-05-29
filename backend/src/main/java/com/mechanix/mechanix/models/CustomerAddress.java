@@ -14,7 +14,7 @@ public class CustomerAddress {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long user_id;
+    private Long userId;
 
     private String address_line1;
 
@@ -26,8 +26,8 @@ public class CustomerAddress {
 
     private String country;
 
-    public CustomerAddress(Long user_id, String address_line1, String address_line2, String city, String postal_code, String country) {
-        this.user_id = user_id;
+    public CustomerAddress(Long userId, String address_line1, String address_line2, String city, String postal_code, String country) {
+        this.userId = userId;
         this.address_line1 = address_line1;
         this.address_line2 = address_line2;
         this.city = city;

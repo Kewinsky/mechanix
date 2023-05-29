@@ -22,7 +22,7 @@ public class ProductController {
     }
 
     @GetMapping(path="/getProductById/{id}")
-    Product getUserById(@PathVariable Long id) {
+    Product getProductById(@PathVariable Long id) {
         return productRepository.findById(id)
                 .orElseThrow(() -> new ProductNotFoundException(id));
     }
@@ -42,7 +42,7 @@ public class ProductController {
                     product1.setDescription(product.getDescription());
                     product1.setCategory(product.getCategory());
                     product1.setPrice(product.getPrice());
-                    product1.setDiscount_id(product.getDiscount_id());
+                    product1.setDiscountId(product.getDiscountId());
                     productRepository.save(product1);
                     return "Product updated.";
                 })

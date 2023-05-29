@@ -14,15 +14,15 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long order_id;
+    private Long orderId;
 
-    private Long product_id;
+    private Long productId;
 
     private int quantity;
 
-    public OrderItem(Long order_id, Long product_id, int quantity) {
-        this.order_id = order_id;
-        this.product_id = product_id;
+    public OrderItem(Long orderId, Long productId, int quantity) {
+        this.orderId = orderId;
+        this.productId = productId;
         this.quantity = quantity;
     }
 }

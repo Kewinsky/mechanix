@@ -25,7 +25,7 @@ public class DiscountController {
     }
 
     @GetMapping(path="/getDiscountById/{id}")
-    Discount getUserById(@PathVariable Long id) {
+    Discount getDiscountById(@PathVariable Long id) {
         return discountRepository.findById(id)
                 .orElseThrow(() -> new DiscountNotFoundException(id));
     }

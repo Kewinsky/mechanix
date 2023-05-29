@@ -25,7 +25,7 @@ public class CustomerDetailsController {
 
     @PostMapping(path="/addDetails")
     String addDetails (@RequestBody CustomerDetails details) {
-        details.setUser_id(USER_ID);
+        details.setUserId(USER_ID);
         customerDetailsRepository.save(details);
         return "Customer details added.";
     }
