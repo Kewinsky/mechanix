@@ -25,16 +25,16 @@ public class Product {
 
     private float price;
 
-    private Long discount_id;
+    private Long discountId;
 
     private LocalDate created_at;
 
-    public Product(String name, String description, ECategory category, float price, Long discount_id, LocalDate created_at) {
+    public Product(String name, String description, ECategory category, float price, Long discountId, LocalDate created_at) {
         this.name = name;
         this.description = description;
         this.category = category;
         this.price = price;
-        this.discount_id = discount_id;
+        this.discountId = discountId;
         this.created_at = created_at;
     }
 }

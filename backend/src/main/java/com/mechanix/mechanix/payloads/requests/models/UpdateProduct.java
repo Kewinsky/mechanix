@@ -22,6 +22,6 @@ public class UpdateProduct {
 
     private float price;
 
-    private Long discount_id;
+    private Long discountId;
 
 }

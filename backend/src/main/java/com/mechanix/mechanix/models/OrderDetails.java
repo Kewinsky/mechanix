@@ -1,6 +1,7 @@
 package com.mechanix.mechanix.models;
 
 import com.mechanix.mechanix.models.enums.EPaymentType;
+import com.mechanix.mechanix.models.enums.EStatus;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,19 +17,19 @@ public class OrderDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long user_id;
+    private Long userId;
 
     private float total;
 
     @Enumerated(EnumType.STRING)
     private EPaymentType payment_type;
 
-    private String status;
+    private EStatus status;
 
     private LocalDate created_at;
 
-    public OrderDetails(Long user_id, float total, EPaymentType payment_type, String status, LocalDate created_at) {
-        this.user_id = user_id;
+    public OrderDetails(Long userId, float total, EPaymentType payment_type, EStatus status, LocalDate created_at) {
+        this.userId = userId;
         this.total = total;
         this.payment_type = payment_type;
         this.status = status;

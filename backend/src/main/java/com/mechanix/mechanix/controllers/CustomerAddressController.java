@@ -1,11 +1,8 @@
 package com.mechanix.mechanix.controllers;
 
 import com.mechanix.mechanix.exceptions.customerAddress.AddressNotFoundException;
-import com.mechanix.mechanix.exceptions.product.ProductNotFoundException;
 import com.mechanix.mechanix.models.CustomerAddress;
-import com.mechanix.mechanix.models.CustomerDetails;
 import com.mechanix.mechanix.payloads.requests.models.UpdateAddress;
-import com.mechanix.mechanix.payloads.requests.models.UpdateDetails;
 import com.mechanix.mechanix.repositories.CustomerAddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +25,7 @@ public class CustomerAddressController {
 
     @PostMapping(path="/addAddress")
     String addAddress (@RequestBody CustomerAddress address) {
-        address.setUser_id(USER_ID);
+        address.setUserId(USER_ID);
         customerAddressRepository.save(address);
         return "Customer address added.";
     }
