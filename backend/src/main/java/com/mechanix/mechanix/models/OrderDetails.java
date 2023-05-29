@@ -1,6 +1,7 @@
 package com.mechanix.mechanix.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.mechanix.mechanix.models.enums.EDelivery;
 import com.mechanix.mechanix.models.enums.EPaymentType;
 import com.mechanix.mechanix.models.enums.EStatus;
 import com.mechanix.mechanix.utils.RandomIdGenerator;
@@ -30,6 +31,8 @@ public class OrderDetails {
 
     private EStatus status;
 
+    private EDelivery delivery;
+
     @JsonIgnore
     private LocalDate createdAt;
 
@@ -39,11 +42,12 @@ public class OrderDetails {
         this.createdAt = LocalDate.now();
     }
 
-    public OrderDetails(Long userId, float total, EPaymentType paymentType, EStatus status) {
+    public OrderDetails(Long userId, float total, EPaymentType paymentType, EStatus status, EDelivery delivery) {
         this.userId = userId;
         this.total = total;
         this.paymentType = paymentType;
         this.status = status;
+        this.delivery = delivery;
     }
 
 }
