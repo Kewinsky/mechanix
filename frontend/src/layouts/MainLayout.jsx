@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import NavbarComponent from "../components/Navbar/NavbarComponent";
 import FooterComponent from "../components/Footer/FooterComponent";
+import "./MainLayout.scss";
 
 const MainLayout = ({ children, pageTitle }) => {
   useEffect(() => {
@@ -10,7 +11,7 @@ const MainLayout = ({ children, pageTitle }) => {
   return (
     <>
       <NavbarComponent />
-      <main>{children}</main>
+      <main className="main__content">{children}</main>
       <FooterComponent />
     </>
   );
