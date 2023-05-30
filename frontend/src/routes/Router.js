@@ -48,7 +48,7 @@ export const Router = () => {
         }
       />
       <Route
-        path="/shoppingcart"
+        path="/cart"
         element={
           <MainLayout pageTitle={"MECHANiX_ | Shooping Cart"}>
             <ShoppingCartPage />
