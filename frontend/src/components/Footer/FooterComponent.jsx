@@ -9,32 +9,32 @@ import {
 
 const FooterComponent = () => {
   return (
-    <footer class="footer">
+    <footer className="footer">
       <div className="footer__top-group">
-        <div class="footer__links">
-          <ul class="footer__menu">
+        <div className="footer__links">
+          <ul className="footer__menu">
             <li class="footer__menu-item">
               <a href="/">Home</a>
             </li>
-            <li class="footer__menu-item">
-              <a href="/">About</a>
+            <li className="footer__menu-item">
+              <a href="/shop">Products</a>
             </li>
-            <li class="footer__menu-item">
-              <a href="/">Services</a>
+            <li className="footer__menu-item">
+              <a href="/aboutus">About Us</a>
             </li>
-            <li class="footer__menu-item">
-              <a href="/">Contact</a>
+            <li className="footer__menu-item">
+              <a href="/contactus">Contact Us</a>
             </li>
           </ul>
         </div>
-        <div class="footer__newsletter">
-          <form class="footer__newsletter-form">
+        <div className="footer__newsletter">
+          <form className="footer__newsletter-form">
             <input
               type="email"
               placeholder="Give an email, get the newsletter."
-              class="footer__newsletter-input"
+              className="footer__newsletter-input"
             />
-            <button type="submit" class="footer__newsletter-btn">
+            <button type="submit" className="footer__newsletter-btn">
               <BsArrowRight size="24" />
             </button>
           </form>
@@ -42,11 +42,11 @@ const FooterComponent = () => {
       </div>
 
       <div className="footer__bottom-group">
-        <div class="copyright">
+        <div className="copyright">
           <span>&copy; 2023 Mechanix. </span> Terms of use <span>and</span>{" "}
           privacy policy.
         </div>
-        <div class="footer__social-media">
+        <div className="footer__social-media">
           <ul className="footer__menu">
             <li className="footer__menu-item">
               <a href="/">
