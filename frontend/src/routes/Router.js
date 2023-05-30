@@ -11,6 +11,8 @@ import CustomerAccountPage from "../pages/CustomerAccountPage/CustomerAccountPag
 import ContactPage from "../pages/ContactPage/ContactPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage/ResetPasswordPage";
+import UnauthorizedPage from "../pages/UnauthorizedPage/UnauthorizedPage";
+import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 
 export const Router = () => {
   return (
@@ -100,6 +102,22 @@ export const Router = () => {
         element={
           <MainLayout pageTitle={"MECHANiX_ | Reset password"}>
             <ResetPasswordPage />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/unauthorized"
+        element={
+          <MainLayout pageTitle={"MECHANiX_ | Unauthorized"}>
+            <UnauthorizedPage />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="*"
+        element={
+          <MainLayout pageTitle={"MECHANiX_ | Not found"}>
+            <NotFoundPage />
           </MainLayout>
         }
       />

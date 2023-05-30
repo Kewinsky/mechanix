@@ -1,0 +1,19 @@
+@import "../../styles/theme.scss";
+
+.page__wrapper {
+  text-align: center;
+}
+
+.page__header {
+  font-size: 25px;
+  font-family: $secondaryFont;
+  margin: 1rem;
+}
+
+.page__content-link {
+  border-bottom: 1px solid $accent;
+}
+
+.page__content-link:hover {
+  color: $accent;
+}

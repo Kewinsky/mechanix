@@ -1,5 +1,8 @@
 @import "../styles/theme.scss";
 
 .main__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: calc(100vh - 53px - 313px);
 }
