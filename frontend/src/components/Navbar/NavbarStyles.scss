@@ -137,16 +137,6 @@
 }
 
 @media (max-width: 480px) {
-  .navbar__brand {
-    margin-left: 8px;
-  }
-
-  .navbar__menu-group {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
   .navbar__icon-menu .navbar__item {
     margin-right: 0;
   }

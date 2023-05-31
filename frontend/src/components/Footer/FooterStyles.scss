@@ -53,12 +53,12 @@
 
 .footer__newsletter-input {
   width: 100%;
-  padding: 8px;
+  padding: 8px 0;
   border: none;
-  margin-right: 10px;
 }
 
 .footer__newsletter-btn {
+  padding: 0;
   background-color: transparent;
   color: $darkGray;
   border: none;
@@ -73,25 +73,59 @@
   color: $black;
 }
 
+.footer__policy-links:hover {
+  color: $accent;
+  border-bottom: 1px solid $accent;
+}
+
 @media (max-width: 992px) {
   .footer {
     text-align: center;
+  }
+
+  .footer__bottom-group {
+    margin-top: 0px;
   }
 
   .footer__top-group {
     flex-direction: column;
   }
 
-  .footer__newsletter-form {
-    margin-top: 30px;
+  .footer__newsletter-input {
+    width: 100%;
   }
 
-  .footer__newsletter-input {
-    width: 300px;
+  .footer__links {
+    align-self: start;
+    margin-top: 60px;
+  }
+
+  .footer__social-media {
+    align-self: start;
+  }
+
+  .footer__menu-item {
+    display: flex;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .footer__menu-item.social {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .footer__bottom-group {
     flex-direction: column;
+  }
+
+  .footer__newsletter {
+    order: -1;
   }
 
   .footer__social-media {
@@ -99,6 +133,12 @@
   }
 
   .copyright {
-    margin-top: 30px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__newsletter {
+    width: 100%;
   }
 }

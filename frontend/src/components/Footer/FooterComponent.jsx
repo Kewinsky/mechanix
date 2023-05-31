@@ -14,16 +14,16 @@ const FooterComponent = () => {
         <div className="footer__links">
           <ul className="footer__menu">
             <li class="footer__menu-item">
-              <a href="/">Home</a>
+              <a href="/">HOME</a>
             </li>
             <li className="footer__menu-item">
-              <a href="/shop">Products</a>
+              <a href="/shop">PRODUCTS</a>
             </li>
             <li className="footer__menu-item">
-              <a href="/aboutus">About Us</a>
+              <a href="/aboutus">ABOUT US</a>
             </li>
             <li className="footer__menu-item">
-              <a href="/contactus">Contact Us</a>
+              <a href="/contactus">CONTACT US</a>
             </li>
           </ul>
         </div>
@@ -43,27 +43,34 @@ const FooterComponent = () => {
 
       <div className="footer__bottom-group">
         <div className="copyright">
-          <span>&copy; 2023 Mechanix. </span> Terms of use <span>and</span>{" "}
-          privacy policy.
+          <span>&copy; 2023 Mechanix. </span>{" "}
+          <a href="/terms-of-use" className="footer__policy-links">
+            Terms of use
+          </a>{" "}
+          <span>and</span>{" "}
+          <a href="/privacy-policy" className="footer__policy-links">
+            privacy policy
+          </a>
+          .
         </div>
         <div className="footer__social-media">
           <ul className="footer__menu">
-            <li className="footer__menu-item">
+            <li className="footer__menu-item social">
               <a href="/">
                 <BsLinkedin size="24" />
               </a>
             </li>
-            <li className="footer__menu-item">
+            <li className="footer__menu-item social">
               <a href="/">
                 <BsFacebook size="24" />
               </a>
             </li>
-            <li className="footer__menu-item">
+            <li className="footer__menu-item social">
               <a href="/">
                 <BsTwitter size="24" />
               </a>
             </li>
-            <li className="footer__menu-item">
+            <li className="footer__menu-item social">
               <a href="/">
                 <BsInstagram size="24" />
               </a>
