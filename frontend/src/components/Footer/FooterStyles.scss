@@ -74,12 +74,11 @@
 }
 
 .footer__policy-links {
-  border-bottom: 1px solid $darkGray;
+  text-decoration: underline;
 }
 
 .footer__policy-links:hover {
   color: $accent;
-  border-bottom: 1px solid $accent;
 }
 
 @media (max-width: 992px) {
