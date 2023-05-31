@@ -127,9 +127,14 @@
     display: flex;
     background-color: $lightGray;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     align-items: center;
     width: 300px;
+
+    & a {
+      margin-left: 5px;
+      color: $darkGray;
+    }
   }
 
   .navbar__item-input {

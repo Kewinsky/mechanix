@@ -73,6 +73,10 @@
   color: $black;
 }
 
+.footer__policy-links {
+  border-bottom: 1px solid $darkGray;
+}
+
 .footer__policy-links:hover {
   color: $accent;
   border-bottom: 1px solid $accent;
