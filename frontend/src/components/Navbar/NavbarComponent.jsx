@@ -54,14 +54,14 @@ const NavbarComponent = () => {
                 <BsCart size="24" />
               </a>
             </li>
-            <li className="navbar__item my-account">
-              <a href="/myaccount">
-                <BsPersonCircle size="24" />
-              </a>
-            </li>
             <li className="navbar__item logout">
               <a href="/logout">
                 <BsBoxArrowRight size="24" /> Logout
+              </a>
+            </li>
+            <li className="navbar__item my-account">
+              <a href="/myaccount">
+                <BsPersonCircle size="24" />
               </a>
             </li>
           </ul>
