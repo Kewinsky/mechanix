@@ -34,10 +34,6 @@
   display: flex;
 }
 
-.navbar__search {
-  display: none;
-}
-
 .logout {
   display: none;
 }
@@ -123,30 +119,11 @@
     display: contents;
   }
 
-  .navbar__item.search {
-    display: flex;
-    background-color: $lightGray;
-    border-radius: 10px;
-    padding: 5px;
-    align-items: center;
-    width: 300px;
-
-    & a {
-      margin-left: 5px;
-      color: $darkGray;
-    }
-  }
-
   .navbar__item-input {
     background-color: $lightGray;
     border: none;
     font-size: 26px;
     padding-left: 10px;
-    width: 100%;
-  }
-
-  .navbar__search {
-    display: block;
     width: 100%;
   }
 

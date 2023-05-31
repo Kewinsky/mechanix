@@ -54,18 +54,6 @@ const NavbarComponent = () => {
         <span className="navbar__separator" />
         <div className="navbar__icon-menu">
           <ul className="navbar__menu navbar-nav">
-            <li className="navbar__item search">
-              <a href="/">
-                <BsSearch size="24" className="search-btn" />
-              </a>
-              <form className="navbar__search">
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="navbar__item-input"
-                />
-              </form>
-            </li>
             <li className="navbar__item cart">
               <a href="/cart">
                 <BsCart size="24" />
