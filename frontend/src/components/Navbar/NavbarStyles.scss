@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 15px;
   border-bottom: 1px solid $lightGray;
   margin-bottom: 30px;
 }
@@ -29,6 +28,14 @@
 .navbar__menu {
   list-style: none;
   display: flex;
+}
+
+.navbar__search {
+  display: none;
+}
+
+.logout {
+  display: none;
 }
 
 .navbar__item {
@@ -62,12 +69,13 @@
       content: "";
       border-bottom: 1px solid $accent;
       display: block;
-      width: 115px;
+      width: 100%;
     }
   }
 
   @media (max-width: 480px) {
     margin: 20px;
+    width: 100%;
   }
 }
 
@@ -77,29 +85,74 @@
 
 @media (max-width: 992px) {
   .navbar__menu-group {
-    margin: 20px 0 0 20px;
+    margin: 20px 0;
   }
 
   .navbar__item {
-    font-size: 16px;
-    margin: 10px 0;
+    font-size: 26px;
+    margin-bottom: 20px;
+
+    &.cart a::after {
+      content: " Cart";
+    }
+
+    &.my-account a::after {
+      content: " My Account";
+    }
   }
 
-  .navbar__icon-menu {
-    display: flex;
+  .navbar__item:last-child {
+    margin-bottom: 0;
   }
 
   .navbar__icon-menu .navbar__menu {
     display: contents;
   }
+
+  .navbar__item.search {
+    display: flex;
+    background-color: $lightGray;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    width: 300px;
+  }
+
+  .navbar__item-input {
+    background-color: $lightGray;
+    border: none;
+    font-size: 26px;
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  .navbar__search {
+    display: block;
+    width: 100%;
+  }
+
+  .logout {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
+  .navbar__brand {
+    margin-left: 8px;
+  }
+
   .navbar__menu-group {
-    margin: 20px 20px 0 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
+  }
+
+  .navbar__icon-menu .navbar__item {
+    margin-right: 0;
+  }
+
+  .navbar__item {
+    margin-right: 0;
   }
 }
 

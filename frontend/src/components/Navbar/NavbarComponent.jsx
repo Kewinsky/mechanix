@@ -1,5 +1,10 @@
 import "./NavbarStyles.scss";
-import { BsSearch, BsCart, BsPersonCircle } from "react-icons/bs";
+import {
+  BsSearch,
+  BsCart,
+  BsPersonCircle,
+  BsBoxArrowRight,
+} from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const NavbarComponent = () => {
@@ -42,19 +47,31 @@ const NavbarComponent = () => {
         <span className="navbar__separator" />
         <div className="navbar__icon-menu">
           <ul className="navbar__menu navbar-nav">
-            <li className="navbar__item">
+            <li className="navbar__item search">
               <a href="/">
-                <BsSearch size="24" />
+                <BsSearch size="24" className="search-btn" />
               </a>
+              <form className="navbar__search">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="navbar__item-input"
+                />
+              </form>
             </li>
-            <li className="navbar__item">
+            <li className="navbar__item cart">
               <a href="/cart">
                 <BsCart size="24" />
               </a>
             </li>
-            <li className="navbar__item">
+            <li className="navbar__item my-account">
               <a href="/myaccount">
                 <BsPersonCircle size="24" />
+              </a>
+            </li>
+            <li className="navbar__item logout">
+              <a href="/logout">
+                <BsBoxArrowRight size="24" /> Logout
               </a>
             </li>
           </ul>
