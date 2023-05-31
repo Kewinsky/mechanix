@@ -1,0 +1,44 @@
+@import "../../styles/theme.scss";
+
+.home__page-wrapper {
+  width: 100%;
+}
+
+.shop__latest-wrapper {
+}
+
+.shop__latest-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.shop__latest-heading {
+  font-size: 24px;
+}
+
+.shop__latest-view {
+  color: $accent;
+  font-weight: bold;
+}
+
+.shop__latest-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 86px 57px;
+}
+
+@media (max-width: 992px) {
+  .shop__latest-products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 43px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop__latest-products {
+    grid-template-columns: 1fr;
+    gap: 21px 12px;
+  }
+}
