@@ -13,19 +13,26 @@ const NavbarComponent = () => {
       <a href="/" className="navbar__brand">
         <span>M</span>ECHANiX_
       </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="custom-toggler-icon">
-          <AiOutlineMenu size="24" />
+      <div className="navbar__group-collapsed">
+        <span className="navbar__item collapsed-cart">
+          <a href="/cart">
+            <BsCart size="24" />
+          </a>
         </span>
-      </button>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="custom-toggler-icon">
+            <AiOutlineMenu size="24" />
+          </span>
+        </button>
+      </div>
       <div
         className="navbar__menu-group collapse navbar-collapse"
         id="navbarSupportedContent"
