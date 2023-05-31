@@ -1,5 +1,10 @@
 import "./NavbarStyles.scss";
-import { BsCart, BsPersonCircle, BsBoxArrowRight } from "react-icons/bs";
+import {
+  BsCart,
+  BsPersonCircle,
+  BsBoxArrowRight,
+  BsHeart,
+} from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const NavbarComponent = () => {
@@ -54,14 +59,19 @@ const NavbarComponent = () => {
                 <BsCart size="24" />
               </a>
             </li>
-            <li className="navbar__item logout">
-              <a href="/logout">
-                <BsBoxArrowRight size="24" /> Logout
+            <li className="navbar__item fav">
+              <a href="/favourites">
+                <BsHeart size="24" />
               </a>
             </li>
             <li className="navbar__item my-account">
               <a href="/myaccount">
                 <BsPersonCircle size="24" />
+              </a>
+            </li>
+            <li className="navbar__item logout">
+              <a href="/logout">
+                <BsBoxArrowRight size="24" /> Logout
               </a>
             </li>
           </ul>

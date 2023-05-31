@@ -51,7 +51,7 @@
   margin-right: 20px;
 }
 
-.navbar__icon-menu .navbar__item:last-child {
+.navbar__icon-menu .my-account {
   margin-right: 0px;
 }
 
@@ -98,6 +98,10 @@
 
     &.cart {
       display: none;
+    }
+
+    &.fav a::after {
+      content: " Favourites";
     }
 
     &.my-account a::after {

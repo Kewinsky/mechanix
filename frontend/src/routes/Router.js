@@ -13,6 +13,9 @@ import AboutPage from "../pages/AboutPage/AboutPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage/ResetPasswordPage";
 import UnauthorizedPage from "../pages/UnauthorizedPage/UnauthorizedPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import TermsOfUsePage from "../pages/TermsOfUsePage/TermsOfUsePage";
+import PrivacyPolicyPage from "../pages/PrivacyPolicyPage/PrivacyPolicyPage";
+import FavouritesPage from "../pages/FavouritesPage/FavouritesPage";
 
 export const Router = () => {
   return (
@@ -38,6 +41,14 @@ export const Router = () => {
         element={
           <MainLayout pageTitle={"MECHANiX_ | Product"}>
             <ProductPage />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/favourites"
+        element={
+          <MainLayout pageTitle={"MECHANiX_ | Favourites"}>
+            <FavouritesPage />
           </MainLayout>
         }
       />
@@ -86,6 +97,22 @@ export const Router = () => {
         element={
           <MainLayout pageTitle={"MECHANiX_ | About Us"}>
             <AboutPage />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/terms-of-use"
+        element={
+          <MainLayout pageTitle={"MECHANiX_ | Terms Of Use"}>
+            <TermsOfUsePage />
+          </MainLayout>
+        }
+      />
+      <Route
+        path="/privacy-policy"
+        element={
+          <MainLayout pageTitle={"MECHANiX_ | Privacy Policy"}>
+            <PrivacyPolicyPage />
           </MainLayout>
         }
       />
