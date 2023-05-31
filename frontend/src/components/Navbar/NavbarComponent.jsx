@@ -1,10 +1,5 @@
 import "./NavbarStyles.scss";
-import {
-  BsSearch,
-  BsCart,
-  BsPersonCircle,
-  BsBoxArrowRight,
-} from "react-icons/bs";
+import { BsCart, BsPersonCircle, BsBoxArrowRight } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const NavbarComponent = () => {
