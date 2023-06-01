@@ -1,0 +1,20 @@
+@import "../../styles/theme.scss";
+
+.main__content {
+  display: block;
+}
+
+.filter-wrapper {
+  height: 400px;
+  background-color: $lightGray;
+  margin-right: 36px;
+}
+
+.filter-slider {
+  width: 100%;
+}
+
+.filter-switch-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,31 @@
+@import "../../styles/theme.scss";
+
+.shop-wrapper {
+  display: flex;
+}
+
+.shop-header {
+  font-size: 33px;
+  font-weight: bolder;
+  margin-bottom: 40px;
+}
+
+.shop-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 24px;
+}
+
+@media (max-width: 992px) {
+  .shop-products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-products {
+    grid-template-columns: 1fr;
+    gap: 15px 6px;
+  }
+}
