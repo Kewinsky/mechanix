@@ -35,24 +35,24 @@ const SliderComponent = () => {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img src={photo_2} className="d-block w-100" alt="..." />
-          <div class="carousel-overlay">
+          <div className="carousel-overlay">
             <div className="carousel-overlay-content">
               <h4>Custom Keyboards</h4>
               <p>$ 149.99</p>
-              <button class="btn btn-outline-light">View Product</button>
+              <button className="btn btn-outline-light">View Product</button>
             </div>
           </div>
         </div>
         <div className="carousel-item">
           <img src={photo_1} className="d-block w-100" alt="..." />
-          <div class="carousel-overlay">
+          <div className="carousel-overlay">
             <div className="carousel-overlay-content">
               <h4>Keychron K2</h4>
               <div className="carousel-price-group">
                 <p className="discount">$ 79.99</p>
                 <p>$ 79.99</p>
               </div>
-              <button class="btn btn-outline-light">View Product</button>
+              <button className="btn btn-outline-light">View Product</button>
             </div>
           </div>
         </div>
