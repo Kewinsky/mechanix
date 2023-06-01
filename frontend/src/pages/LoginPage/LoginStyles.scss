@@ -22,7 +22,7 @@
   width: 100%;
   height: 39px;
 
-  &.email {
+  &.input-margin {
     margin-bottom: 46px;
   }
 }
@@ -68,7 +68,7 @@
   background-color: $lightGray;
   width: 100%;
   padding: 5px;
-  margin-bottom: 125px;
+  margin-bottom: 64px;
 }
 
 .toggle-option {
@@ -87,5 +87,22 @@
 }
 
 .toggle-option.active {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   background-color: $white;
+}
+
+@media (max-width: 768px) {
+  .login-wrapper {
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    margin: 0;
+  }
+
+  .toggle-switch {
+    margin-bottom: 60px;
+  }
 }

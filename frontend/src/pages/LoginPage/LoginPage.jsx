@@ -30,26 +30,52 @@ const LoginPage = () => {
         </div>
       </div>
       <form className="login-form">
+        {activeOption === "register" ? (
+          <>
+            <div>
+              <input
+                type="text"
+                placeholder="First Name"
+                required
+                className="login-input input-margin"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Last Name"
+                required
+                className="login-input input-margin"
+              />
+            </div>
+          </>
+        ) : null}
         <div>
           <input
             type="email"
-            id="email"
-            name="email"
             placeholder="Email"
             required
-            className="login-input email"
+            className="login-input input-margin"
           />
         </div>
         <div>
           <input
             type="password"
-            id="password"
-            name="password"
             placeholder="Password"
             required
-            className="login-input"
+            className="login-input input-margin"
           />
         </div>
+        {activeOption === "register" ? (
+          <div>
+            <input
+              type="password"
+              placeholder="Confirm password"
+              required
+              className="login-input"
+            />
+          </div>
+        ) : null}
         <div className="login-remember">
           <input
             type="checkbox"
