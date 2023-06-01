@@ -34,31 +34,31 @@ const SliderComponent = () => {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={photo_1} className="d-block w-100" alt="..." />
-          {/* <div className="carousel-caption d-none d-md-block">
-            <h4>Search for Recipes</h4>
-            <p className="text-center">
-              Nullam efficitur nunc sit risus id ex amet ornare bibendum.
-            </p>
-          </div> */}
+          <img src={photo_2} className="d-block w-100" alt="..." />
+          <div class="carousel-overlay">
+            <div className="carousel-overlay-content">
+              <h4>Custom Keyboards</h4>
+              <p>$ 149.99</p>
+              <button class="btn btn-outline-light">View Product</button>
+            </div>
+          </div>
         </div>
         <div className="carousel-item">
-          <img src={photo_2} className="d-block w-100" alt="..." />
-          {/* <div className="carousel-caption d-none d-md-block">
-            <h4>Filtering & Sorting</h4>
-            <p className="text-center">
-              Orci varius natoque penatibus et magnis dis parturient montes.
-            </p>
-          </div> */}
+          <img src={photo_1} className="d-block w-100" alt="..." />
+          <div class="carousel-overlay">
+            <div className="carousel-overlay-content">
+              <h4>Keychron K2</h4>
+              <div className="carousel-price-group">
+                <p className="discount">$ 79.99</p>
+                <p>$ 79.99</p>
+              </div>
+              <button class="btn btn-outline-light">View Product</button>
+            </div>
+          </div>
         </div>
+
         <div className="carousel-item">
           <img src={photo_3} className="d-block w-100" alt="..." />
-          {/* <div className="carousel-caption d-none d-md-block">
-            <h4>Choose Recipe and Cook!</h4>
-            <p className="text-center">
-              Donec ut risus id ex faucibus bibendum a dictum erat condimentum.
-            </p>
-          </div> */}
         </div>
       </div>
     </div>
