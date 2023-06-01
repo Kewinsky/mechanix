@@ -58,3 +58,34 @@
     color: $accent;
   }
 }
+
+.toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  height: 53px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: $lightGray;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 125px;
+}
+
+.toggle-option {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  color: $black;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-option.active {
+  background-color: $white;
+}
