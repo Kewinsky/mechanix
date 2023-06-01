@@ -13,7 +13,7 @@ const FooterComponent = () => {
       <div className="footer__top-group">
         <div className="footer__links">
           <ul className="footer__menu">
-            <li class="footer__menu-item">
+            <li className="footer__menu-item">
               <a href="/">HOME</a>
             </li>
             <li className="footer__menu-item">
