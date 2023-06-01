@@ -10,7 +10,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-wrapper">
-      <h1 className="login-header">My Account</h1>
+      <h1 className="login-header">My account</h1>
       <div className="toggle-switch">
         <div
           className={`toggle-option ${
@@ -91,7 +91,7 @@ const LoginPage = () => {
           </button>
         </div>
         <div className="login-forgot">
-          <a href="/">Have you forgotten your password?</a>
+          <a href="/resetpassword">Have you forgotten your password?</a>
         </div>
       </form>
     </div>
