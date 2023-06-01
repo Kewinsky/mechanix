@@ -32,6 +32,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .about-wrapper {
+    margin: 40px 0;
+  }
+}
+
 @media (max-width: 480px) {
   .about-wrapper {
     margin: 0;
