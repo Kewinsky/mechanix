@@ -1,0 +1,17 @@
+@import "../../styles/theme.scss";
+
+.custom-switch .MuiSwitch-track {
+  background-color: $darkGray;
+}
+
+.custom-switch .MuiSwitch-thumb {
+  background-color: $accent;
+}
+
+.custom-switch .MuiSwitch-switchBase.Mui-checked {
+  color: $accent;
+}
+
+.custom-switch .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: $accent;
+}
