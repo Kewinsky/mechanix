@@ -4,7 +4,7 @@ import "./ShopStyles.scss";
 
 const ShopPage = () => {
   return (
-    <>
+    <div>
       <h1 className="shop-header">Shop</h1>
       <div className="shop-wrapper">
         <FilterComponent />
@@ -17,7 +17,7 @@ const ShopPage = () => {
           <ProductTileComponent />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
