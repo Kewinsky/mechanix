@@ -35,11 +35,9 @@ const ContactPage = () => {
           />
         </div>
         <textarea placeholder="Message" required className="contact-input" />
-        <div>
-          <button type="submit" className="contact-submit">
-            Send
-          </button>
-        </div>
+        <button type="submit" className="contact-submit">
+          SEND
+        </button>
       </form>
     </div>
   );

@@ -1,0 +1,27 @@
+@import "../../styles/theme.scss";
+
+.range__slider-custom {
+  color: $black !important;
+}
+
+.range__slider-custom:hover {
+  background-color: transparent;
+}
+
+.range__slider-custom .MuiSlider-thumb {
+  background-color: $black;
+}
+
+.range__slider-custom .MuiSlider-track {
+  background-color: $black;
+}
+
+.range__slider-custom .MuiSlider-rail {
+  background-color: $darkGray;
+}
+
+.range__slider-price {
+  color: $darkGray;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}

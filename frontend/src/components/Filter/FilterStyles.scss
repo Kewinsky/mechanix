@@ -1,12 +1,7 @@
 @import "../../styles/theme.scss";
 
-.main__content {
-  display: block;
-}
-
 .filter-wrapper {
   height: 400px;
-  background-color: $lightGray;
   margin-right: 36px;
 }
 
@@ -16,5 +11,73 @@
 
 .filter-switch-wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+// search bar styles
+.filter__search {
+  width: 260px;
+  margin-bottom: 40px;
+}
+
+.filter__search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $darkGray;
+}
+
+.filter__search-input {
+  width: 100%;
+  padding: 11px 0;
+  border: none;
+}
+
+.filter__search-btn {
+  margin-left: 5px;
+  padding: 0;
+  background-color: transparent;
+  color: $black;
+  border: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+// filter submit button
+.filter-submit {
+  border: none;
+  background-color: $accent;
+  color: $white;
+  height: 38px;
+  width: 100%;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $darkGray;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-wrapper {
+    height: auto;
+    margin-right: 0;
+  }
+
+  .filter__search {
+    width: 100%;
+  }
+
+  .filter-switch-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .filter-submit {
+    margin-bottom: 50px;
+  }
 }
