@@ -39,7 +39,7 @@ const SliderComponent = () => {
             <div className="carousel-overlay-content">
               <h4>Custom Keyboards</h4>
               <p>$ 149.99</p>
-              <button className="btn btn-outline-light">View Product</button>
+              <button>View Product</button>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ const SliderComponent = () => {
                 <p className="discount">$ 79.99</p>
                 <p>$ 79.99</p>
               </div>
-              <button className="btn btn-outline-light">View Product</button>
+              <button>View Product</button>
             </div>
           </div>
         </div>
