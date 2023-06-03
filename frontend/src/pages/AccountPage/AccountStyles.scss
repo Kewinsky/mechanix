@@ -1,0 +1,26 @@
+@import "../../styles/theme.scss";
+
+.about__page-wrapper {
+  margin-top: 100px;
+  margin-bottom: 250px;
+}
+
+.about__page-header {
+  font-size: 33px;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+@media (max-width: 768px) {
+  .about__page-wrapper {
+    margin-top: 50px;
+    margin-bottom: 125px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__page-wrapper {
+    margin: 0;
+  }
+}
