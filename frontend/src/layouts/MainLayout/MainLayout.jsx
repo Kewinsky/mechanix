@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import NavbarComponent from "../components/Navbar/NavbarComponent";
-import FooterComponent from "../components/Footer/FooterComponent";
+import NavbarComponent from "../../components/Navbar/NavbarComponent";
+import FooterComponent from "../../components/Footer/FooterComponent";
 import "./MainLayout.scss";
 
 const MainLayout = ({ children, pageTitle }) => {
