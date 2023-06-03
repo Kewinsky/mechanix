@@ -1,9 +1,5 @@
 @import "../../styles/theme.scss";
 
-.main__content {
-  display: block;
-}
-
 .navigation-wrapper {
   border-bottom: 1px solid $lightGray;
   margin-bottom: 40px;
@@ -11,7 +7,7 @@
 }
 
 .navigation-link {
-  color: $lightGray;
+  color: $darkGray;
   padding-bottom: 40px;
 
   margin-right: 40px;
