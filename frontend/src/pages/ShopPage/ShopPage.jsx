@@ -4,9 +4,9 @@ import "./ShopStyles.scss";
 
 const ShopPage = () => {
   return (
-    <div>
+    <div className="shop-wrapper">
       <h1 className="shop-header">Shop</h1>
-      <div className="shop-wrapper">
+      <div className="shop-content">
         <FilterComponent />
         <div className="shop-products">
           <ProductTileComponent />

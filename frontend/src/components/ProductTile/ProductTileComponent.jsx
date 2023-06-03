@@ -5,7 +5,7 @@ const ProductTileComponent = () => {
   const product = {
     title: "Title",
     price: "69.99",
-    discount: "-20%",
+    discount: "20%",
     isSold: false,
   };
 
@@ -14,7 +14,7 @@ const ProductTileComponent = () => {
       {product.isSold === true ? (
         <div className="product__tile-label">Sold out</div>
       ) : product.discount !== null ? (
-        <div className="product__tile-label">{product.discount}</div>
+        <div className="product__tile-label">- {product.discount}</div>
       ) : null}
       <div className="product__tile-photo">
         <img src={photo} alt="keyboard" />
