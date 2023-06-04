@@ -1,15 +1,21 @@
 @import "../../styles/theme.scss";
 
 .navigation-wrapper {
-  border-bottom: 1px solid $lightGray;
+  font-size: 16px;
   margin-bottom: 40px;
+  & button {
+    display: none;
+  }
+}
+
+.navigation-tabs {
   padding-bottom: 40px;
+  border-bottom: 1px solid $lightGray;
 }
 
 .navigation-link {
   color: $darkGray;
   padding-bottom: 40px;
-
   margin-right: 40px;
 
   &.selected {
@@ -22,8 +28,44 @@
       left: 0;
       bottom: 0.5px;
       width: 100%;
-      height: 1px;
+      height: 2px;
       background-color: $accent;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    & button {
+      display: block;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  .navigation-tabs {
+    padding: 20px 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    border-bottom: none;
+  }
+
+  .navigation-link {
+    padding-bottom: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.selected {
+      &::after {
+        bottom: 1px;
+        height: 2px;
+        width: 100%;
+      }
     }
   }
 }

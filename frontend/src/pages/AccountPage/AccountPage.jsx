@@ -11,18 +11,13 @@ const AccountPage = () => {
 
   const [selectedTab, setSelectedTab] = useState(0);
 
-  const handleTabClick = (e, index) => {
-    e.preventDefault();
-    setSelectedTab(index);
-  };
-
   return (
     <div className="about__page-wrapper">
       <h1 className="about__page-header">My account</h1>
       <NavigationComponent
         tabs={tabs}
-        handleTabClick={handleTabClick}
         selectedTab={selectedTab}
+        setSelectedTab={setSelectedTab}
       />
       <div className="about__page-content">
         {selectedTab === 0 ? (
