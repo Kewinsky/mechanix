@@ -1,0 +1,30 @@
+@import "../../../styles/theme.scss";
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 16px 0;
+}
+
+.orders-heading {
+  border-bottom: 1px solid $black;
+}
+
+.orders-data {
+  color: $darkGray;
+
+  & tr {
+    border-bottom: 1px solid $lightGray;
+  }
+
+  & button {
+    border: none;
+    background-color: transparent;
+    color: $accent;
+    font-weight: 600;
+  }
+}
