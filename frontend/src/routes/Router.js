@@ -7,7 +7,6 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import OrderPage from "../pages/OrderPage/OrderPage";
 import CheckoutPage from "../pages/CheckoutPage/CheckoutPage";
 import ShoppingCartPage from "../pages/ShoppingCartPage/ShoppingCartPage";
-import CustomerAccountPage from "../pages/CustomerAccountPage/CustomerAccountPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage/ResetPasswordPage";
@@ -16,6 +15,7 @@ import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import TermsOfUsePage from "../pages/TermsOfUsePage/TermsOfUsePage";
 import PrivacyPolicyPage from "../pages/PrivacyPolicyPage/PrivacyPolicyPage";
 import FavouritesPage from "../pages/FavouritesPage/FavouritesPage";
+import AccountPage from "../pages/AccountPage/AccountPage";
 
 export const Router = () => {
   return (
@@ -80,7 +80,7 @@ export const Router = () => {
         path="/myaccount"
         element={
           <MainLayout pageTitle={"MECHANiX_ | My Account"}>
-            <CustomerAccountPage />
+            <AccountPage />
           </MainLayout>
         }
       />

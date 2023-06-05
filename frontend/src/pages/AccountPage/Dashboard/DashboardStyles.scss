@@ -1,0 +1,17 @@
+@import "../../../styles/theme.scss";
+
+.dashboard-wrapper {
+  font-size: 16px;
+}
+
+.dashboard-greatings {
+  & span {
+    font-weight: 600;
+  }
+}
+
+.dashboard-content {
+  & span {
+    color: $accent;
+  }
+}

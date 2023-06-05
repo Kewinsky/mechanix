@@ -1,0 +1,27 @@
+@import "../../styles/theme.scss";
+
+.account__page-wrapper {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 250px;
+}
+
+.account__page-header {
+  font-size: 33px;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+@media (max-width: 768px) {
+  .account__page-wrapper {
+    margin-top: 50px;
+    margin-bottom: 125px;
+  }
+}
+
+@media (max-width: 480px) {
+  .account__page-wrapper {
+    margin: 0px;
+  }
+}
