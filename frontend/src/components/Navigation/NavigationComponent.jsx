@@ -24,7 +24,7 @@ const NavigationComponent = ({ tabs, selectedTab, setSelectedTab }) => {
 
   return (
     <div className="navigation-wrapper">
-      <button onClick={handleLeftClick}>
+      <button onClick={handleLeftClick} className="navigation-button-left">
         <BsArrowBarLeft size="24" />
       </button>
       <div className="navigation-tabs">
@@ -41,7 +41,7 @@ const NavigationComponent = ({ tabs, selectedTab, setSelectedTab }) => {
           </a>
         ))}
       </div>
-      <button onClick={handleRightClick}>
+      <button onClick={handleRightClick} className="navigation-button-right">
         <BsArrowBarRight size="24" />
       </button>
     </div>

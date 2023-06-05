@@ -1,12 +1,12 @@
 @import "../../styles/theme.scss";
 
-.about__page-wrapper {
+.account__page-wrapper {
   width: 100%;
   margin-top: 100px;
   margin-bottom: 250px;
 }
 
-.about__page-header {
+.account__page-header {
   font-size: 33px;
   font-weight: bolder;
   text-align: center;
@@ -14,14 +14,14 @@
 }
 
 @media (max-width: 768px) {
-  .about__page-wrapper {
+  .account__page-wrapper {
     margin-top: 50px;
     margin-bottom: 125px;
   }
 }
 
 @media (max-width: 480px) {
-  .about__page-wrapper {
+  .account__page-wrapper {
     margin-top: 0px;
     margin-bottom: 60px;
   }

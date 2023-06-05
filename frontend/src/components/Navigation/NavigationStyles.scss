@@ -8,6 +8,14 @@
   }
 }
 
+.navigation-button-left {
+  box-shadow: 6px 0 3px -3px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-button-right {
+  box-shadow: -6px 0 3px -3px rgba(0, 0, 0, 0.2);
+}
+
 .navigation-tabs {
   padding-bottom: 40px;
   border-bottom: 1px solid $lightGray;
