@@ -19,7 +19,7 @@ const OrdersTab = () => {
           <td>Delivered</td>
           <td>$ 25</td>
           <td>
-            <button>View Order</button>
+            <a href="/order">View Order</a>
           </td>
         </tr>
         <tr>
@@ -28,7 +28,7 @@ const OrdersTab = () => {
           <td>Delivered</td>
           <td>$ 25</td>
           <td>
-            <button>View Order</button>
+            <a href="/order">View Order</a>
           </td>
         </tr>
         <tr>
@@ -37,7 +37,7 @@ const OrdersTab = () => {
           <td>Delivered</td>
           <td>$ 25</td>
           <td>
-            <button>View Order</button>
+            <a href="/order">View Order</a>
           </td>
         </tr>
         <tr>
@@ -46,7 +46,7 @@ const OrdersTab = () => {
           <td>Delivered</td>
           <td>$ 25</td>
           <td>
-            <button>View Order</button>
+            <a href="/order">View Order</a>
           </td>
         </tr>
       </tbody>
