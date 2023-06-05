@@ -13,7 +13,6 @@ const AccountPage = () => {
 
   return (
     <div className="account__page-wrapper">
-      <h1 className="account__page-header">My account</h1>
       <NavigationComponent
         tabs={tabs}
         selectedTab={selectedTab}

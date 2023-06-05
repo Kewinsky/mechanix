@@ -28,3 +28,44 @@
     font-weight: 600;
   }
 }
+
+.orders-wrapper {
+  display: none;
+}
+
+.orders-order {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $lightGray;
+}
+
+.orders-order .info {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & p:last-child {
+    color: $darkGray;
+  }
+
+  & a {
+    border: none;
+    background-color: transparent;
+    color: $accent;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-table {
+    display: none;
+  }
+
+  .orders-wrapper {
+    display: block;
+  }
+}
