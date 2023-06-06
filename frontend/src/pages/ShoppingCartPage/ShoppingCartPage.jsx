@@ -1,4 +1,3 @@
-import DropdownComponent from "../../components/Dropdown/DropdownCoponent";
 import CartItem from "./CartItem/CartItemComponent";
 import "./ShoppingCartStyles.scss";
 

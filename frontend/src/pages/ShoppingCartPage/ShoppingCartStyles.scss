@@ -120,6 +120,28 @@
   margin-bottom: 23px;
 }
 
+@media (max-width: 1200px) {
+  .cart-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column {
+    margin-right: 0;
+    margin-bottom: 125px;
+  }
+
+  .cart-summary-info {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cart-summary-info {
+    margin-left: 35px;
+  }
+}
+
 @media (max-width: 768px) {
   .cart-wrapper {
     margin-top: 50px;
