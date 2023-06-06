@@ -1,0 +1,192 @@
+@import "../../styles/theme.scss";
+
+// general styles
+.checkout-wrapper {
+  width: 100%;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 250px;
+}
+
+.checkout-header {
+  text-align: center;
+  font-size: $headerOne;
+  font-weight: bolder;
+  margin-bottom: 64px;
+}
+
+.subheader {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.checkout-content {
+  display: flex;
+  justify-content: center;
+}
+
+// billing details
+.billing-details {
+  width: 100%;
+  max-width: 580px;
+}
+
+.billing-form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+.fullname {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 37px;
+}
+
+.fullname input {
+  width: 100%;
+}
+
+.billing-form input {
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid $darkGray;
+  margin-bottom: 37px;
+  padding-bottom: 12px;
+}
+
+.billing-form .input-checkbox {
+  margin-bottom: 37px;
+
+  & .checkbox:last-child {
+    margin-bottom: 0;
+  }
+
+  & input {
+    margin-bottom: 0;
+  }
+}
+
+.billing-form .input-checkbox .checkbox {
+  margin-bottom: 17px;
+
+  & label {
+    margin-left: 10px;
+  }
+}
+
+// your order
+.user-order {
+  width: 100%;
+  max-width: 580px;
+}
+
+.user-summary-wrapper {
+  padding: 50px;
+  background-color: $lightGray;
+}
+
+.new-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  border-bottom: 1px solid $darkGray;
+  padding-bottom: 17px;
+
+  & p:last-child {
+    color: $darkGray;
+  }
+}
+
+.items {
+  display: block;
+  & .item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+  }
+
+  & .item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.new-row.header {
+  & p:last-child {
+    color: $black;
+  }
+}
+
+.new-row.total {
+  font-weight: 600;
+  & p:last-child {
+    color: $black;
+  }
+}
+
+.payment-type {
+  margin: 50px 0;
+
+  & input {
+    accent-color: $black;
+  }
+
+  & label {
+    margin-left: 10px;
+    margin-bottom: 17px;
+  }
+}
+
+.submit-button {
+  width: 100%;
+  border: none;
+  color: $white;
+  background-color: $accent;
+  height: 53px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $darkGray;
+  }
+}
+
+@media (max-width: 992px) {
+  .checkout-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 125px;
+  }
+
+  .billing-details {
+    width: 100%;
+    max-width: 500px;
+    margin-right: 0;
+  }
+
+  .billing-form {
+    margin-right: 0;
+  }
+
+  .user-order {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-wrapper {
+    margin: 0;
+  }
+  .checkout-details-wrapper {
+    display: block;
+  }
+
+  .fullname {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
