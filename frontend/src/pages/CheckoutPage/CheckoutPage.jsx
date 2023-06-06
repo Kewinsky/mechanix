@@ -4,7 +4,7 @@ import { FaPaypal } from "react-icons/fa";
 const CheckoutPage = () => {
   return (
     <div className="checkout-wrapper">
-      <h1 className="checkout-header">Checkout</h1>
+      <h1 className="checkout-header">Shopping Cart</h1>
       <div className="checkout-content">
         <div className="billing-details">
           <h1 className="subheader">Billing Details</h1>
