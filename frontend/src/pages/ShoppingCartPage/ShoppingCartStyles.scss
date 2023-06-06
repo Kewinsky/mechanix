@@ -1,0 +1,134 @@
+@import "../../styles/theme.scss";
+
+.cart-wrapper {
+  width: 100%;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 250px;
+}
+
+.cart-header {
+  text-align: center;
+  font-size: $headerOne;
+  font-weight: bolder;
+  margin-bottom: 64px;
+}
+
+.cart-wrapper input {
+  width: 100%;
+  font-size: 12px;
+  border: none;
+  border-bottom: 1px solid $lightGray;
+  padding-bottom: 17px;
+  margin-top: 17px;
+  margin-right: 70px;
+}
+
+.cart-content {
+  display: flex;
+  justify-content: center;
+}
+
+.left-column {
+  width: 100%;
+  max-width: 580px;
+  margin-right: 100px;
+}
+
+.cart-items {
+  margin-bottom: 100px;
+}
+
+.coupon-code {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coupon-code button {
+  border: none;
+  color: $white;
+  background-color: $accent;
+  height: 53px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  padding: 0 25px;
+
+  &:hover {
+    background-color: $darkGray;
+  }
+}
+
+.right-column {
+  width: 100%;
+  max-width: 580px;
+}
+
+.cart-summary-header {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.cart-summary {
+  display: flex;
+}
+
+.cart-summary .info {
+  color: $darkGray;
+}
+
+.cart-summary-info {
+  margin-left: 140px;
+}
+
+.cart-cummary-calculate {
+  margin-top: 40px;
+}
+
+.cart-cummary-calculate button {
+  margin-top: 23px;
+  width: 100%;
+  border: 1px solid $black;
+  color: $black;
+  background-color: transparent;
+  height: 53px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+  padding: 0 25px;
+
+  &:hover {
+    color: $accent;
+    border: 1px solid $accent;
+  }
+}
+
+.cart-summary-total {
+  margin-top: 45px;
+  padding-top: 45px;
+  border-top: 1px solid $lightGray;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.submit-button {
+  margin-top: 45px;
+}
+
+.margin {
+  margin-bottom: 23px;
+}
+
+@media (max-width: 768px) {
+  .cart-wrapper {
+    margin-top: 50px;
+    margin-bottom: 125px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-wrapper {
+    margin: 0;
+  }
+}
