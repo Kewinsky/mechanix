@@ -1,0 +1,30 @@
+@import "../../styles/theme.scss";
+
+.quantity-component {
+  display: flex;
+  color: $darkGray;
+  background-color: $lightGray;
+  border-radius: 5px;
+
+  & p {
+    align-self: center;
+    text-align: center;
+  }
+}
+
+.quantity-button {
+  border: 1px solid $lightGray;
+  background-color: $lightGray;
+  padding: 17px;
+  color: $darkGray;
+
+  &.left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &.right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
