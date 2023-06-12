@@ -1,7 +1,7 @@
 import CartItem from "./CartItem/CartItemComponent";
-import "./ShoppingCartStyles.scss";
+import "./CartStyles.scss";
 
-const ShoppingCartPage = () => {
+const CartPage = () => {
   return (
     <div className="cart-wrapper">
       <h1 className="cart-header">Checkout</h1>
@@ -52,4 +52,4 @@ const ShoppingCartPage = () => {
   );
 };
 
-export default ShoppingCartPage;
+export default CartPage;

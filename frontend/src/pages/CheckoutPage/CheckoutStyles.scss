@@ -92,6 +92,10 @@
   margin-bottom: 17px;
   border-bottom: 1px solid $darkGray;
   padding-bottom: 17px;
+
+  & p:last-child {
+    color: $darkGray;
+  }
 }
 
 .user-order .summary .items {
@@ -104,6 +108,12 @@
 
   & .item:last-child {
     margin-bottom: 0;
+  }
+}
+
+.user-order .summary .new-row.header {
+  & p:last-child {
+    color: $black;
   }
 }
 

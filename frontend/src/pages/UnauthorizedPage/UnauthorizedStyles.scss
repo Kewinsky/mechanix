@@ -1,24 +1,24 @@
 @import "../../styles/theme.scss";
 
-.page__wrapper {
+.unauthorized-page {
   text-align: center;
   align-self: center;
 }
 
-.page__header {
+.unauthorized-page h1 {
   font-size: $headerSecond;
   font-family: $secondaryFont;
   margin: 1rem;
 }
 
-.page__content {
+.unauthorized-page p {
   line-height: 25px;
 }
 
-.page__content-link {
+.unauthorized-page a {
   border-bottom: 1px solid $accent;
-}
 
-.page__content-link:hover {
-  color: $accent;
+  &:hover {
+    color: $accent;
+  }
 }
