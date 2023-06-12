@@ -2,6 +2,8 @@
 
 .quantity-component {
   display: flex;
+  width: 100px;
+  justify-content: space-between;
   color: $darkGray;
   background-color: $lightGray;
   border-radius: 5px;

@@ -1,0 +1,75 @@
+@import "../../../styles/theme.scss";
+
+.sidebar-wrapper {
+  display: flex;
+  border-bottom: 1px solid $lightGray;
+  margin-bottom: 23px;
+}
+
+.sidebar-wrapper img {
+  width: auto;
+  height: 136px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sidebar-wrapper .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+
+  & .price {
+    color: $accent;
+  }
+}
+
+.remove-button {
+  border: none;
+  align-self: flex-start;
+  background-color: transparent;
+  transition: 0.3s;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+// quantity for sidebar
+.sidebar-quantity-component {
+  font-size: 12px;
+  display: flex;
+  width: 100px;
+  align-items: center;
+  color: $darkGray;
+
+  & p {
+    align-self: center;
+    text-align: center;
+    padding: 0 5px;
+  }
+}
+
+.sidebar-quantity-button {
+  border: none;
+  background-color: transparent;
+  color: $darkGray;
+}
+
+// subtotal
+.sidebar-summary button {
+  border: 1px solid $black;
+  background-color: transparent;
+  border-radius: 5px;
+  height: 53px;
+  width: 100%;
+  font-weight: 600;
+}
+
+.sidebar-summary-subtotal {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

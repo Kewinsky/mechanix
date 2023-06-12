@@ -43,6 +43,13 @@
   margin-right: 20px;
 }
 
+.navbar__item.cart {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  transition: 0.3s;
+}
+
 .navbar__item:last-child {
   margin-right: 0;
 }
