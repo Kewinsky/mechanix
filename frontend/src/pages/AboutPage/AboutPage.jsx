@@ -3,9 +3,9 @@ import photo from "../../assets/images/about-us.png";
 
 const AboutPage = () => {
   return (
-    <div className="about-wrapper">
-      <h1 className="about-header">About Us_</h1>
-      <p className="about-paragraph">
+    <div className="about-page">
+      <h1>About Us_</h1>
+      <p>
         Keychron was formed in 2017 by a group of keyboard enthusiasts who have
         extensive experience in keyboard manufacturing. The group consists of
         designers, marketers, and production experts. Our core team members,
@@ -17,8 +17,8 @@ const AboutPage = () => {
         company address: 13/F, Prosper Commercial Bldg., 9 Yin Chong Street,
         Kowloon, Hong Kong
       </p>
-      <img src={photo} alt="keyboard" className="about-image" />
-      <p className="about-paragraph">
+      <img src={photo} alt="keyboard" />
+      <p>
         We’ve partnered a factory with 20 years of experience, which produces
         top-notch keyboards for many well-known keyboard brands over the years.
         We can assure you that the Keychron keyboard will never fail you.

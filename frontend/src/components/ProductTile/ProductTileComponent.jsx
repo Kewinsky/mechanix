@@ -20,15 +20,15 @@ const ProductTileComponent = () => {
         <img src={photo} alt="keyboard" />
         <div className="product__tile-overlay">
           <div className="product__tile-icons">
-            <a href="/" className="product__tile-icon">
+            <button className="product__tile-icon">
               <BsCart size="32" />
-            </a>
-            <a href="/" className="product__tile-icon">
+            </button>
+            <a href="/product" className="product__tile-icon">
               <BsEye size="32" />
             </a>
-            <a href="/" className="product__tile-icon">
+            <button className="product__tile-icon">
               <BsHeart size="32" />
-            </a>
+            </button>
           </div>
         </div>
       </div>

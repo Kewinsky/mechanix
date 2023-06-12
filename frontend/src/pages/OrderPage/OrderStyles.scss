@@ -45,6 +45,10 @@
   background-color: $lightGray;
 }
 
+.order-summary-wrapper .items {
+  border-bottom: 1px solid $darkGray;
+}
+
 .order-summary-wrapper .new-row {
   display: flex;
   justify-content: space-between;
@@ -75,7 +79,6 @@
 .subtotal {
   margin: 18px 0;
   padding: 18px 0;
-  border-top: 1px solid $darkGray;
   border-bottom: 1px solid $darkGray;
   & p:last-child {
     color: $darkGray;

@@ -49,7 +49,7 @@ const OrderPage = () => {
             <p>PRODUCT</p>
             <p>TOTAL</p>
           </div>
-          <div>
+          <div className="items">
             <div className="new-row item">
               <p>Item</p>
               <p>$69</p>

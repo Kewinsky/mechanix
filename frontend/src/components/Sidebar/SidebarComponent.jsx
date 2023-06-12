@@ -28,7 +28,9 @@ const SidebarComponent = ({ isOpen, setIsOpen }) => {
           <p>Subtotal (3 items)</p>
           <p>$ 112,00</p>
         </div>
-        <button>VIEW CART</button>
+        <a href="/cart">
+          <button className="sidebar-summary-cart-button">VIEW CART</button>
+        </a>
       </div>
     </div>
   );

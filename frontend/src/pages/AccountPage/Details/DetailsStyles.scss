@@ -1,6 +1,6 @@
 @import "../../../styles/theme.scss";
 
-.details-wrapper {
+.details-tab {
   display: flex;
   justify-content: center;
 
@@ -10,22 +10,24 @@
   }
 }
 
-.details-wrapper-container {
+.details-tab .container {
   width: 500px;
 }
 
-.details-header {
+.details-tab h1 {
   font-size: $headerOne;
   font-weight: bolder;
   margin-bottom: 40px;
   text-align: center;
 }
 
-.details-paragraph {
+.details-tab p {
   margin-bottom: 40px;
+  font-size: 12px;
+  color: $darkGray;
 }
 
-.details-input {
+.details-tab input {
   border: none;
   font-size: 14px;
   border-bottom: 1px solid $lightGray;
@@ -38,12 +40,7 @@
   }
 }
 
-.details-paragraph {
-  font-size: 12px;
-  color: $darkGray;
-}
-
-.details-submit {
+.details-tab button {
   border: none;
   background-color: $accent;
   color: $white;
@@ -57,32 +54,20 @@
   }
 }
 
-.details-forgot {
-  margin-top: 25px;
-
-  &:hover {
-    color: $accent;
-  }
-}
-
 @media (max-width: 768px) {
-  .details-wrapper {
+  .details-tab {
     width: 100%;
     margin-top: 50px;
     margin-bottom: 125px;
   }
 
-  .details-paragraph {
-    margin-bottom: 38px;
-  }
-
-  .details-input {
+  .details-tab input {
     margin-bottom: 32px;
   }
 }
 
 @media (max-width: 480px) {
-  .details-wrapper {
+  .details-tab {
     margin: 0;
   }
 }

@@ -72,6 +72,10 @@
 
 .product__tile-icon {
   color: $black;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  transition: 0.3s;
 
   &:hover {
     color: $accent;

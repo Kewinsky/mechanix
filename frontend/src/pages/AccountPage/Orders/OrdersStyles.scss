@@ -1,20 +1,15 @@
 @import "../../../styles/theme.scss";
 
-.orders-table {
+.orders-tab table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.orders-table th,
-.orders-table td {
-  padding: 25px 0;
-}
-
-.orders-heading {
+.orders-tab thead {
   border-bottom: 1px solid $black;
 }
 
-.orders-data {
+.orders-tab tbody {
   color: $darkGray;
 
   & tr {
@@ -29,17 +24,23 @@
   }
 }
 
-.orders-wrapper {
+.orders-tab th,
+.orders-tab td {
+  padding: 25px 0;
+}
+
+// mobile version
+.orders-tab .mobile {
   display: none;
 }
 
-.orders-order {
+.orders-tab .order {
   padding-bottom: 40px;
   margin-bottom: 40px;
   border-bottom: 1px solid $lightGray;
 }
 
-.orders-order .info {
+.orders-tab .info {
   margin-bottom: 25px;
   display: flex;
   justify-content: space-between;
@@ -61,11 +62,11 @@
 }
 
 @media (max-width: 768px) {
-  .orders-table {
+  .orders-tab table {
     display: none;
   }
 
-  .orders-wrapper {
+  .orders-tab .mobile {
     display: block;
   }
 }
