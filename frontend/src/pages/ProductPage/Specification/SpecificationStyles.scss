@@ -1,0 +1,23 @@
+@import "../../../styles/theme.scss";
+
+.specification-tab {
+  display: flex;
+  justify-content: space-between;
+
+  color: $darkGray;
+
+  & span {
+    color: $black;
+    font-weight: 600;
+  }
+}
+
+.specification-container p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  .specification-tab {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../styles/theme.scss";
+
+.reviews-tab {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 87px;
+}
+
+.reviews-review-header {
+  font-size: 20px;
+  margin-bottom: 76px;
+}
+
+.reviews-form-header {
+  font-size: 20px;
+  margin-bottom: 26px;
+}
+
+.reviews-form-content {
+  color: $darkGray;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .reviews-tab {
+    grid-template-columns: 1fr;
+  }
+}
