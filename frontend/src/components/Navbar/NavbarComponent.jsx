@@ -7,7 +7,11 @@ import {
 } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 
-const NavbarComponent = () => {
+const NavbarComponent = ({ isOpen, setIsOpen }) => {
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg">
       <a href="/" className="navbar__brand">
@@ -54,11 +58,9 @@ const NavbarComponent = () => {
         <span className="navbar__separator" />
         <div className="navbar__icon-menu">
           <ul className="navbar__menu navbar-nav">
-            <li className="navbar__item cart">
-              <a href="/cart">
-                <BsCart size="24" />
-              </a>
-            </li>
+            <button className="navbar__item cart" onClick={toggleMenu}>
+              <BsCart size="24" />
+            </button>
             <li className="navbar__item fav">
               <a href="/favourites">
                 <BsHeart size="24" />
