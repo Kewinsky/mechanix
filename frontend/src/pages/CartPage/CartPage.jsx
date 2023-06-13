@@ -4,7 +4,7 @@ import "./CartStyles.scss";
 const CartPage = () => {
   return (
     <div className="cart-page">
-      <h1>Checkout</h1>
+      <h1>Cart</h1>
       <div className="content">
         <div className="left-column">
           <div className="items">

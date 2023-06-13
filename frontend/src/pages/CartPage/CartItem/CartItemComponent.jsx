@@ -17,7 +17,7 @@ const CartItem = () => {
         </div>
         <QuantityComponent quantity={quantity} setQuantity={setQuantity} />
       </div>
-      <button>
+      <button className="remove-btn">
         <BsFillXCircleFill size="20" />
       </button>
     </div>
