@@ -1,6 +1,6 @@
 @import "../../styles/theme.scss";
 
-.sidebar {
+.sidebar-wrapper {
   height: 100vh;
   background-color: $white;
   border-left: 1px solid $lightGray;
@@ -17,16 +17,16 @@
   z-index: 999;
 }
 
-.sidebar-container {
+.sidebar-wrapper .container {
   display: flex;
   flex-direction: column;
 }
 
-.sidebar.open {
+.sidebar-wrapper.open {
   transform: translateX(0);
 }
 
-.sidebar-close {
+.sidebar-wrapper .close-btn {
   align-self: end;
   border: none;
   background-color: transparent;
@@ -39,21 +39,39 @@
   }
 }
 
-.sidebar-toggle {
-  margin-bottom: 10px;
-}
-
-.sidebar-items {
-  height: 400px;
-  overflow-y: auto;
-}
-
-.sidebar-header {
+.sidebar-wrapper h1 {
   margin-bottom: 17px;
   font-size: 16px;
 }
 
-.sidebar-quantity {
+.sidebar-wrapper .quantity {
   color: $darkGray;
   font-size: 12px;
+}
+
+.sidebar-wrapper .items {
+  height: 400px;
+  overflow-y: auto;
+}
+
+// subtotal
+.sidebar-wrapper .summary button {
+  border: 1px solid $black;
+  background-color: transparent;
+  border-radius: 5px;
+  height: 53px;
+  width: 100%;
+  font-weight: 600;
+  transition: 0.3s;
+
+  &:hover {
+    border: 1px solid $accent;
+    color: $accent;
+  }
+}
+
+.sidebar-wrapper .summary .subtotal {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }

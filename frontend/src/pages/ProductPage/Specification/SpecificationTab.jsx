@@ -3,7 +3,7 @@ import "./SpecificationStyles.scss";
 const SpecificationTab = () => {
   return (
     <div className="specification-tab">
-      <div className="specification-container">
+      <div className="container">
         <p>
           <span>Number of Keys:</span> 84 keys
         </p>
@@ -21,7 +21,7 @@ const SpecificationTab = () => {
         </p>
       </div>
       <br></br>
-      <div className="specification-container">
+      <div className="container">
         <p>
           <span>Dimension:</span> 313 x 123 mm
         </p>
@@ -37,7 +37,7 @@ const SpecificationTab = () => {
       </div>
       <br></br>
 
-      <div className="specification-container">
+      <div className="container">
         <p>
           <span>1 x</span> Keboard
         </p>

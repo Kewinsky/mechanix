@@ -1,44 +1,41 @@
 @import "../../styles/theme.scss";
 
-.home__page-wrapper {
+.home-page {
   width: 100%;
   margin-bottom: 250px;
 }
 
-.shop__latest-wrapper {
-}
-
-.shop__latest-header {
+.home-page .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 30px 0;
 }
 
-.shop__latest-heading {
+.home-page .header h1 {
   font-size: 24px;
 }
 
-.shop__latest-view {
+.home-page .header a {
   color: $accent;
   font-weight: bold;
 }
 
-.shop__latest-products {
+.home-page .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 86px 57px;
 }
 
 @media (max-width: 992px) {
-  .shop__latest-products {
+  .home-page .products {
     grid-template-columns: repeat(2, 1fr);
     gap: 43px 28px;
   }
 }
 
 @media (max-width: 480px) {
-  .shop__latest-products {
+  .home-page .products {
     grid-template-columns: 1fr;
     gap: 21px 12px;
   }

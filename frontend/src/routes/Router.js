@@ -6,7 +6,7 @@ import ProductPage from "../pages/ProductPage/ProductPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import OrderPage from "../pages/OrderPage/OrderPage";
 import CheckoutPage from "../pages/CheckoutPage/CheckoutPage";
-import ShoppingCartPage from "../pages/ShoppingCartPage/ShoppingCartPage";
+import CartPage from "../pages/CartPage/CartPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
 import ResetPasswordPage from "../pages/ResetPasswordPage/ResetPasswordPage";
@@ -64,7 +64,7 @@ export const Router = () => {
         path="/cart"
         element={
           <MainLayout pageTitle={"MECHANiX_ | Shooping Cart"}>
-            <ShoppingCartPage />
+            <CartPage />
           </MainLayout>
         }
       />

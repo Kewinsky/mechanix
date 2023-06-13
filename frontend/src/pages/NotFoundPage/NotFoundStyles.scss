@@ -1,24 +1,20 @@
 @import "../../styles/theme.scss";
 
-.page__wrapper {
+.error-page {
   text-align: center;
   align-self: center;
 }
 
-.page__header {
+.error-page h1 {
   font-size: $headerSecond;
   font-family: $secondaryFont;
   margin: 1rem;
 }
 
-.page__content {
-  line-height: 25px;
-}
-
-.page__content-link {
+.error-page a {
   border-bottom: 1px solid $accent;
-}
 
-.page__content-link:hover {
-  color: $accent;
+  &:hover {
+    color: $accent;
+  }
 }

@@ -10,67 +10,58 @@ import {
 const FooterComponent = () => {
   return (
     <footer className="footer">
-      <div className="footer__top-group">
-        <div className="footer__links">
-          <ul className="footer__menu">
-            <li className="footer__menu-item">
-              <a href="/">HOME</a>
-            </li>
-            <li className="footer__menu-item">
-              <a href="/shop">PRODUCTS</a>
-            </li>
-            <li className="footer__menu-item">
-              <a href="/aboutus">ABOUT US</a>
-            </li>
-            <li className="footer__menu-item">
-              <a href="/contactus">CONTACT US</a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer__newsletter">
-          <form className="footer__newsletter-form">
+      <div className="top">
+        <ul className="menu">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+          <li>
+            <a href="/shop">PRODUCTS</a>
+          </li>
+          <li>
+            <a href="/aboutus">ABOUT US</a>
+          </li>
+          <li>
+            <a href="/contactus">CONTACT US</a>
+          </li>
+        </ul>
+        <div className="newsletter">
+          <form>
             <input
               type="email"
               placeholder="Give an email, get the newsletter."
-              className="footer__newsletter-input"
             />
-            <button type="submit" className="footer__newsletter-btn">
+            <button type="submit">
               <BsArrowRight size="24" />
             </button>
           </form>
         </div>
       </div>
 
-      <div className="footer__bottom-group">
+      <div className="bottom">
         <div className="copyright">
           <span>&copy; 2023 Mechanix. </span>{" "}
-          <a href="/terms-of-use" className="footer__policy-links">
-            Terms of use
-          </a>{" "}
-          <span>and</span>{" "}
-          <a href="/privacy-policy" className="footer__policy-links">
-            privacy policy
-          </a>
-          .
+          <a href="/terms-of-use">Terms of use</a> <span>and</span>{" "}
+          <a href="/privacy-policy">privacy policy</a>.
         </div>
-        <div className="footer__social-media">
-          <ul className="footer__menu">
-            <li className="footer__menu-item social">
+        <div className="socials">
+          <ul>
+            <li>
               <a href="/">
                 <BsLinkedin size="24" />
               </a>
             </li>
-            <li className="footer__menu-item social">
+            <li>
               <a href="/">
                 <BsFacebook size="24" />
               </a>
             </li>
-            <li className="footer__menu-item social">
+            <li>
               <a href="/">
                 <BsTwitter size="24" />
               </a>
             </li>
-            <li className="footer__menu-item social">
+            <li>
               <a href="/">
                 <BsInstagram size="24" />
               </a>

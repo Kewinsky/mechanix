@@ -1,13 +1,13 @@
 import CartItem from "./CartItem/CartItemComponent";
-import "./ShoppingCartStyles.scss";
+import "./CartStyles.scss";
 
-const ShoppingCartPage = () => {
+const CartPage = () => {
   return (
-    <div className="cart-wrapper">
-      <h1 className="cart-header">Checkout</h1>
-      <div className="cart-content">
+    <div className="cart-page">
+      <h1>Checkout</h1>
+      <div className="content">
         <div className="left-column">
-          <div className="cart-items">
+          <div className="items">
             <CartItem />
             <CartItem />
             <CartItem />
@@ -18,20 +18,23 @@ const ShoppingCartPage = () => {
           </div>
         </div>
         <div className="right-column">
-          <h1 className="cart-summary-header">Cart totals</h1>
-          <div className="cart-summary">
+          <h3>Cart totals</h3>
+          <div className="cart-totals">
             <div>
-              <p className="margin">SUBTOTAL</p>
+              <p>SUBTOTAL</p>
+              <br></br>
               <p>SHIPPING</p>
             </div>
-            <div className="cart-summary-info">
-              <p className="margin info">$ 112,00</p>
+            <div className="infos">
+              <p>$ 112,00</p>
+              <br></br>
+
               <div>
-                <p className="info">
+                <p>
                   Shipping costs will be calculated once you have provided
                   address.
                 </p>
-                <div className="cart-cummary-calculate">
+                <div className="calculate">
                   <p>CALCULATE SHIPPING</p>
                   <input type="text" placeholder="COUNTRY" />
                   <input type="text" placeholder="CITY" />
@@ -41,7 +44,7 @@ const ShoppingCartPage = () => {
               </div>
             </div>
           </div>
-          <div className="cart-summary-total">
+          <div className="total">
             <p>TOTAL</p>
             <p>$ 112,00</p>
           </div>
@@ -52,4 +55,4 @@ const ShoppingCartPage = () => {
   );
 };
 
-export default ShoppingCartPage;
+export default CartPage;

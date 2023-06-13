@@ -4,16 +4,14 @@ import "./HomeStyles.scss";
 
 const HomePage = () => {
   return (
-    <div className="home__page-wrapper">
+    <div className="home-page">
       <SliderComponent />
-      <div className="shop__latest-wrapper">
-        <div className="shop__latest-header">
-          <h1 className="shop__latest-heading">Shop The Latest</h1>
-          <a href="/shop" className="shop__latest-view">
-            View All
-          </a>
+      <div>
+        <div className="header">
+          <h1>Shop The Latest</h1>
+          <a href="/shop">View All</a>
         </div>
-        <div className="shop__latest-products">
+        <div className="products">
           <ProductTileComponent />
           <ProductTileComponent />
           <ProductTileComponent />

@@ -1,51 +1,51 @@
 @import "../../styles/theme.scss";
 
-.shop-wrapper {
+.shop-page {
   margin-top: 100px;
   margin-bottom: 250px;
 }
 
-.shop-content {
-  display: flex;
-}
-
-.shop-header {
+.shop-page h1 {
   font-size: 33px;
   font-weight: bolder;
   margin-bottom: 40px;
 }
 
-.shop-products {
+.shop-page .content {
+  display: flex;
+}
+
+.shop-page .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 70px 24px;
 }
 
 @media (max-width: 1200px) {
-  .shop-products {
+  .shop-page .products {
     grid-template-columns: repeat(2, 1fr);
     gap: 35px 12px;
   }
 }
 
 @media (max-width: 992px) {
-  .shop-wrapper {
+  .shop-page {
     margin-top: 50px;
     margin-bottom: 125px;
   }
 
-  .shop-products {
+  .shop-page .products {
     grid-template-columns: 1fr;
     gap: 15px 6px;
   }
 }
 
 @media (max-width: 768px) {
-  .shop-wrapper {
+  .shop-page {
     margin: 0;
   }
 
-  .shop-content {
+  .shop-page .content {
     display: block;
   }
 }

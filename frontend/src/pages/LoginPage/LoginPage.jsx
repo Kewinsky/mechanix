@@ -9,8 +9,8 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-wrapper">
-      <h1 className="login-header">My account</h1>
+    <div className="login-page">
+      <h1>My account</h1>
       <div className="toggle-switch">
         <div
           className={`toggle-option ${
@@ -29,67 +29,33 @@ const LoginPage = () => {
           Register
         </div>
       </div>
-      <form className="login-form">
+      <form>
         {activeOption === "register" ? (
           <>
             <div>
-              <input
-                type="text"
-                placeholder="First Name"
-                required
-                className="login-input input-margin"
-              />
+              <input type="text" placeholder="First Name" required />
             </div>
             <div>
-              <input
-                type="text"
-                placeholder="Last Name"
-                required
-                className="login-input input-margin"
-              />
+              <input type="text" placeholder="Last Name" required />
             </div>
           </>
         ) : null}
         <div>
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            className="login-input input-margin"
-          />
+          <input type="email" placeholder="Email" required />
         </div>
         <div>
-          <input
-            type="password"
-            placeholder="Password"
-            required
-            className="login-input input-margin"
-          />
+          <input type="password" placeholder="Password" required />
         </div>
         {activeOption === "register" ? (
-          <div>
-            <input
-              type="password"
-              placeholder="Confirm password"
-              required
-              className="login-input"
-            />
-          </div>
+          <input type="password" placeholder="Confirm password" required />
         ) : null}
         <div className="login-remember">
-          <input
-            type="checkbox"
-            id="remember"
-            name="remember"
-            className="checkbox"
-          />
+          <input type="checkbox" id="remember" name="remember" />
           <label for="remember">Remember Me</label>
         </div>
-        <div>
-          <button type="submit" className="login-submit">
-            Sign In
-          </button>
-        </div>
+        <button type="submit" className="login-submit">
+          Sign In
+        </button>
         <div className="login-forgot">
           <a href="/resetpassword">Have you forgotten your password?</a>
         </div>

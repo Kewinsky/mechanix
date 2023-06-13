@@ -4,11 +4,11 @@ import "./ShopStyles.scss";
 
 const ShopPage = () => {
   return (
-    <div className="shop-wrapper">
-      <h1 className="shop-header">Shop</h1>
-      <div className="shop-content">
+    <div className="shop-page">
+      <h1>Shop</h1>
+      <div className="content">
         <FilterComponent />
-        <div className="shop-products">
+        <div className="products">
           <ProductTileComponent />
           <ProductTileComponent />
           <ProductTileComponent />

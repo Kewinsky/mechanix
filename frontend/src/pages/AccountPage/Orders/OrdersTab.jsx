@@ -4,9 +4,9 @@ const OrdersTab = () => {
   const items = ["item_1", "item_2", "item_3"];
 
   return (
-    <div>
-      <table className="orders-table">
-        <thead className="orders-heading">
+    <div className="orders-tab">
+      <table>
+        <thead>
           <tr>
             <th>ORDER NUMBER</th>
             <th>DATE</th>
@@ -15,7 +15,7 @@ const OrdersTab = () => {
             <th>ACTIONS</th>
           </tr>
         </thead>
-        <tbody className="orders-data">
+        <tbody>
           {items.map((item) => (
             <tr>
               <td>123456789</td>
@@ -29,9 +29,9 @@ const OrdersTab = () => {
           ))}
         </tbody>
       </table>
-      <div className="orders-wrapper">
+      <div className="mobile">
         {items.map((item) => (
-          <div className="orders-order">
+          <div className="order">
             <div className="info">
               <p>ORDER NUMBER</p>
               <p>8372950284715</p>

@@ -1,28 +1,28 @@
 @import "../../styles/theme.scss";
 
 // general styles
-.checkout-wrapper {
+.checkout-page {
   width: 100%;
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 250px;
 }
 
-.checkout-header {
+.checkout-page h1 {
   text-align: center;
   font-size: $headerOne;
   font-weight: bolder;
   margin-bottom: 64px;
 }
 
-.subheader {
-  font-size: 26px;
-  margin-bottom: 30px;
-}
-
-.checkout-content {
+.checkout-page .content {
   display: flex;
   justify-content: center;
+}
+
+.checkout-page h3 {
+  font-size: 26px;
+  margin-bottom: 30px;
 }
 
 // billing details
@@ -31,23 +31,23 @@
   max-width: 580px;
 }
 
-.billing-form {
+.billing-details form {
   display: flex;
   flex-direction: column;
   margin-right: 100px;
 }
 
-.fullname {
+.billing-details .fullname {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 37px;
+
+  & input {
+    width: 100%;
+  }
 }
 
-.fullname input {
-  width: 100%;
-}
-
-.billing-form input {
+.billing-details input {
   font-size: 16px;
   border: none;
   border-bottom: 1px solid $darkGray;
@@ -55,7 +55,7 @@
   padding-bottom: 12px;
 }
 
-.billing-form .input-checkbox {
+.billing-details .checkbox-wrapper {
   margin-bottom: 37px;
 
   & .checkbox:last-child {
@@ -67,7 +67,7 @@
   }
 }
 
-.billing-form .input-checkbox .checkbox {
+.billing-details .checkbox-wrapper .checkbox {
   margin-bottom: 17px;
 
   & label {
@@ -81,12 +81,12 @@
   max-width: 580px;
 }
 
-.user-summary-wrapper {
+.user-order .summary {
   padding: 50px;
   background-color: $lightGray;
 }
 
-.new-row {
+.user-order .summary .new-row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 17px;
@@ -98,8 +98,8 @@
   }
 }
 
-.items {
-  display: block;
+.user-order .summary .items {
+  flex-direction: column;
   & .item {
     display: flex;
     justify-content: space-between;
@@ -111,20 +111,20 @@
   }
 }
 
-.new-row.header {
+.user-order .summary .new-row.header {
   & p:last-child {
     color: $black;
   }
 }
 
-.new-row.total {
+.user-order .summary .new-row.total {
   font-weight: 600;
   & p:last-child {
     color: $black;
   }
 }
 
-.payment-type {
+.user-order .summary .payment-type {
   margin: 50px 0;
 
   & input {
@@ -153,7 +153,7 @@
 }
 
 @media (max-width: 992px) {
-  .checkout-content {
+  .checkout-page .content {
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -167,10 +167,6 @@
     margin-right: 0;
   }
 
-  .billing-form {
-    margin-right: 0;
-  }
-
   .user-order {
     width: 100%;
     max-width: 500px;
@@ -178,11 +174,11 @@
 }
 
 @media (max-width: 480px) {
-  .checkout-wrapper {
+  .checkout-page {
     margin: 0;
   }
 
-  .fullname {
+  .billing-details .fullname {
     grid-template-columns: 1fr;
     gap: 0;
   }

@@ -61,8 +61,8 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="product-wrapper">
-      <div className="product-preview">
+    <div className="product-page">
+      <div className="preview">
         <div className="left-column">
           <ImageGalleryComponent images={images} />
         </div>
@@ -100,7 +100,7 @@ const ProductPage = () => {
                 <BsHeartFill size="20" />
               )}
             </button>
-            <span className="socials-separator" />
+            <span />
             <a href="/">
               <HiOutlineMail size="20" />
             </a>
@@ -122,7 +122,7 @@ const ProductPage = () => {
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
         />
-        <div className="additional-infos-content">
+        <div>
           {selectedTab === 0 ? (
             <DescriptionTab />
           ) : selectedTab === 1 ? (
@@ -134,7 +134,7 @@ const ProductPage = () => {
       </div>
       <div className="similar-items">
         <h1>Similar Items</h1>
-        <div className="similar-items-container">
+        <div className="container">
           <ProductTileComponent />
           <ProductTileComponent />
           <ProductTileComponent />

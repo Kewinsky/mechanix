@@ -3,12 +3,12 @@ import { FaPaypal } from "react-icons/fa";
 
 const CheckoutPage = () => {
   return (
-    <div className="checkout-wrapper">
-      <h1 className="checkout-header">Shopping Cart</h1>
-      <div className="checkout-content">
+    <div className="checkout-page">
+      <h1>Checkout</h1>
+      <div className="content">
         <div className="billing-details">
-          <h1 className="subheader">Billing Details</h1>
-          <form className="billing-form">
+          <h3>Billing Details</h3>
+          <form>
             <div className="fullname">
               <input type="text" placeholder="First name" required />
               <input type="text" placeholder="Last name" required />
@@ -19,7 +19,7 @@ const CheckoutPage = () => {
             <input type="text" placeholder="Town / City" required />
             <input type="tel" placeholder="Phone" required />
             <input type="email" placeholder="Email" required />
-            <div className="input-checkbox">
+            <div className="checkbox-wrapper">
               <div className="checkbox">
                 <input type="checkbox" id="account" name="account" />
                 <label for="account">Create an account?</label>
@@ -33,8 +33,8 @@ const CheckoutPage = () => {
           </form>
         </div>
         <div className="user-order">
-          <h1 className="subheader">Your Order</h1>
-          <div className="user-summary-wrapper">
+          <h3>Your Order</h3>
+          <div className="summary">
             <div className="new-row header">
               <p>PRODUCT</p>
               <p>TOTAL</p>

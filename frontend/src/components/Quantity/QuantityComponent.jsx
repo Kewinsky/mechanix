@@ -11,12 +11,12 @@ const QuantityComponent = ({ quantity, setQuantity }) => {
     }
   };
   return (
-    <div className="quantity-component">
-      <button className="quantity-button left" onClick={handleSubstractClick}>
+    <div className="quantity-wrapper">
+      <button className="left" onClick={handleSubstractClick}>
         -
       </button>
       <p>{quantity}</p>
-      <button className="quantity-button right" onClick={handleAddClick}>
+      <button className="right" onClick={handleAddClick}>
         +
       </button>
     </div>

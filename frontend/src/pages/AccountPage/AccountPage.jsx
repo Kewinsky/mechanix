@@ -12,13 +12,14 @@ const AccountPage = () => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
-    <div className="account__page-wrapper">
+    <div className="account-page">
+      {selectedTab === 0 ? <h1>My Account</h1> : null}
       <NavigationComponent
         tabs={tabs}
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       />
-      <div className="account__page-content">
+      <div className="content">
         {selectedTab === 0 ? (
           <DashboardTab />
         ) : selectedTab === 1 ? (

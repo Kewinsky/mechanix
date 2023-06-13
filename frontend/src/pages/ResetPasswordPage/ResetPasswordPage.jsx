@@ -2,25 +2,18 @@ import "./ResetPasswordStyles.scss";
 
 const ResetPasswordPage = () => {
   return (
-    <div className="reset-wrapper">
-      <h1 className="reset-header">Have you Forgotten Your Password ?</h1>
-      <p className="reset-paragraph">
+    <div className="reset-page">
+      <h1>Have you Forgotten Your Password ?</h1>
+      <p>
         Enter your username or email address. You will receive a link to create
         a new password by email.
       </p>
-      <form className="reset-form">
+      <form>
         <div>
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            className="reset-input"
-          />
+          <input type="email" placeholder="Email" required />
         </div>
         <div>
-          <button type="submit" className="reset-submit">
-            Reset password
-          </button>
+          <button type="submit">Reset password</button>
         </div>
       </form>
     </div>

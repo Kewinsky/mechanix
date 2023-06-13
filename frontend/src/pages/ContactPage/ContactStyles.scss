@@ -1,34 +1,31 @@
 @import "../../styles/theme.scss";
 
-.contact-wrapper {
+.contact-page {
   margin-top: 100px;
   margin-bottom: 250px;
   width: 900px;
   text-align: center;
 }
 
-.contact-form textarea {
-  min-height: 100px;
+.contact-page h1 {
+  font-size: $headerOne;
+  font-weight: bolder;
+  margin-bottom: 40px;
 }
 
-.contact-form-wrapper {
+.contact-page p {
+  margin-bottom: 76px;
+}
+
+.contact-page .contact-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 86px;
   margin-bottom: 86px;
 }
 
-.contact-header {
-  font-size: $headerOne;
-  font-weight: bolder;
-  margin-bottom: 40px;
-}
-
-.contact-paragraph {
-  margin-bottom: 76px;
-}
-
-.contact-input {
+.contact-page input,
+textarea {
   border: none;
   font-size: 16px;
   border-bottom: 1px solid $lightGray;
@@ -37,7 +34,12 @@
   margin-bottom: 64px;
 }
 
-.contact-submit {
+.contact-page textarea {
+  min-height: 100px;
+  margin-bottom: 100px;
+}
+
+.contact-page button {
   border: none;
   background-color: $accent;
   color: $white;
@@ -51,47 +53,46 @@
   }
 }
 
-.contact-forgot {
-  margin-top: 25px;
-
-  &:hover {
-    color: $accent;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-wrapper {
-    margin-top: 50px;
-    margin-bottom: 125px;
-  }
-
-  .contact-paragraph {
-    margin-bottom: 38px;
-  }
-
-  .contact-input {
-    margin-bottom: 32px;
-  }
-}
-
 @media (max-width: 992px) {
-  .contact-form-wrapper {
+  .contact-page .contact-form {
     gap: 43px;
   }
 }
 
+@media (max-width: 768px) {
+  .contact-page {
+    margin-top: 50px;
+    margin-bottom: 125px;
+  }
+
+  .contact-page .contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 43px;
+  }
+
+  .contact-page p {
+    margin-bottom: 38px;
+  }
+
+  .contact-page input,
+  textarea {
+    margin-bottom: 32px;
+  }
+}
+
 @media (max-width: 480px) {
-  .contact-wrapper {
+  .contact-page {
     width: 100%;
     margin: 0;
   }
 
-  .contact-form-wrapper {
+  .contact-form {
     margin-bottom: 43px;
     grid-template-columns: 1fr;
   }
 
-  .contact-submit {
+  .contact-page button {
     width: 100%;
   }
 }

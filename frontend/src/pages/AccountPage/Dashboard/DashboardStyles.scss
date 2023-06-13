@@ -1,16 +1,16 @@
 @import "../../../styles/theme.scss";
 
-.dashboard-wrapper {
+.dashboard-tab {
   font-size: 16px;
 }
 
-.dashboard-greatings {
+.dashboard-tab .greatings {
   & span {
     font-weight: 600;
   }
 }
 
-.dashboard-content {
+.dashboard-tab .content {
   & span {
     color: $accent;
   }
