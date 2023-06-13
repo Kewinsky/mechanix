@@ -1,11 +1,11 @@
 @import "../../../../styles/theme.scss";
 
-.review-form-wrapper {
+.review-form .wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.review-input {
+.review-form input {
   border: none;
   font-size: 16px;
   border-bottom: 1px solid $lightGray;
@@ -16,9 +16,10 @@
 
 .review-form textarea {
   min-height: 100px;
+  margin-bottom: 64px;
 }
 
-.review-submit {
+.review-form button {
   border: none;
   background-color: $accent;
   color: $white;
@@ -32,7 +33,7 @@
   }
 }
 
-.review-rating {
+.review-form .rating {
   & p {
     color: $darkGray;
     margin-bottom: 14px;
@@ -40,6 +41,6 @@
   margin-bottom: 50px;
 }
 
-.review-rating-stars {
+.review-form .rating-stars {
   margin-right: 7px;
 }
