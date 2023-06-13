@@ -26,7 +26,7 @@
   }
 }
 
-.remove-button {
+.item-wrapper button {
   border: none;
   align-self: flex-start;
   background-color: transparent;
@@ -35,10 +35,6 @@
   &:hover {
     color: $accent;
   }
-}
-
-.mobile {
-  display: none;
 }
 
 @media (max-width: 768px) {

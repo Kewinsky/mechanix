@@ -12,12 +12,12 @@ const CartItem = () => {
       <img src={photo} alt="keyboard" />
       <div className="title">
         <div>
-          <p>Title</p>
+          <h3>Title</h3>
           <p className="price">$ 28,00</p>
         </div>
         <QuantityComponent quantity={quantity} setQuantity={setQuantity} />
       </div>
-      <button className="remove-button">
+      <button>
         <BsFillXCircleFill size="20" />
       </button>
     </div>
