@@ -27,15 +27,13 @@ const NavigationComponent = ({ tabs, selectedTab, setSelectedTab }) => {
       <button onClick={handleLeftClick}>
         <BsArrowBarLeft size="24" />
       </button>
-      <div className="navigation-tabs">
+      <div className="tabs">
         {tabs.map((name, index) => (
           <a
             key={index}
             href="/"
             onClick={(e) => handleTabClick(e, index)}
-            className={`navigation-link ${
-              selectedTab === index ? "selected" : ""
-            }`}
+            className={`${selectedTab === index ? "selected" : ""}`}
           >
             {name}
           </a>

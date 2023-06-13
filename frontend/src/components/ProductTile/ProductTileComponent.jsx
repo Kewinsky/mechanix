@@ -10,29 +10,29 @@ const ProductTileComponent = () => {
   };
 
   return (
-    <div className="product__tile-wrapper">
+    <div className="tile-wrapper">
       {product.isSold === true ? (
-        <div className="product__tile-label">Sold out</div>
+        <div className="label">Sold out</div>
       ) : product.discount !== null ? (
-        <div className="product__tile-label">- {product.discount}</div>
+        <div className="label">- {product.discount}</div>
       ) : null}
-      <div className="product__tile-photo">
+      <div className="photo-container">
         <img src={photo} alt="keyboard" />
-        <div className="product__tile-overlay">
-          <div className="product__tile-icons">
-            <button className="product__tile-icon">
+        <div className="overlay">
+          <div className="icons">
+            <button>
               <BsCart size="32" />
             </button>
-            <a href="/product" className="product__tile-icon">
+            <a href="/product">
               <BsEye size="32" />
             </a>
-            <button className="product__tile-icon">
+            <button>
               <BsHeart size="32" />
             </button>
           </div>
         </div>
       </div>
-      <h3 className="product__tile-title">Title</h3>
+      <h3>Title</h3>
       <span className="product__tile-price">$ 69.99</span>
     </div>
   );

@@ -1,19 +1,19 @@
 @import "../../../styles/theme.scss";
 
-.sidebar-wrapper {
+.sidebar-item {
   display: flex;
   border-bottom: 1px solid $lightGray;
   margin-bottom: 23px;
 }
 
-.sidebar-wrapper img {
+.sidebar-item img {
   width: auto;
   height: 136px;
   object-fit: cover;
   object-position: center;
 }
 
-.sidebar-wrapper .title {
+.sidebar-item .heading {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,19 +26,8 @@
   }
 }
 
-.remove-button {
-  border: none;
-  align-self: flex-start;
-  background-color: transparent;
-  transition: 0.3s;
-
-  &:hover {
-    color: $accent;
-  }
-}
-
 // quantity for sidebar
-.sidebar-quantity-component {
+.sidebar-item .quantity-component {
   font-size: 12px;
   display: flex;
   width: 100px;
@@ -50,10 +39,21 @@
     text-align: center;
     padding: 0 5px;
   }
+
+  & button {
+    border: none;
+    background-color: transparent;
+    color: $darkGray;
+  }
 }
 
-.sidebar-quantity-button {
+.remove-btn {
   border: none;
+  align-self: flex-start;
   background-color: transparent;
-  color: $darkGray;
+  transition: 0.3s;
+
+  &:hover {
+    color: $accent;
+  }
 }

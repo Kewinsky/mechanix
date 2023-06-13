@@ -18,31 +18,25 @@ const SidebarItemComponent = () => {
   };
 
   return (
-    <div className="sidebar-wrapper">
+    <div className="sidebar-item">
       <img src={photo} alt="keyboard" />
-      <div className="title">
+      <div className="heading">
         <div>
           <p>Title</p>
           <p className="price">$ 28,00</p>
         </div>
-        <div className="sidebar-quantity-component">
+        <div className="quantity-component">
           QTY:
-          <button
-            className="sidebar-quantity-button left"
-            onClick={handleSubstractClick}
-          >
+          <button className="left" onClick={handleSubstractClick}>
             -
           </button>
           <p>{quantity}</p>
-          <button
-            className="sidebar-quantity-button right"
-            onClick={handleAddClick}
-          >
+          <button className="right" onClick={handleAddClick}>
             +
           </button>
         </div>
       </div>
-      <button className="remove-button">
+      <button className="remove-btn">
         <BsFillXCircleFill size="20" />
       </button>
     </div>

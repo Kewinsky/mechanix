@@ -29,14 +29,10 @@ const FilterComponent = () => {
 
   return (
     <div className="filter-wrapper">
-      <div className="filter__search">
-        <form className="filter__search-form">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="filter__search-input"
-          />
-          <button type="submit" className="filter__search-btn">
+      <div className="search">
+        <form>
+          <input type="text" placeholder="Search..." />
+          <button type="submit">
             <BsSearch size="19" />
           </button>
         </form>
@@ -44,15 +40,15 @@ const FilterComponent = () => {
       <DropdownComponent placeholder={"Shop By"} data={shopByOptions} />
       <DropdownComponent placeholder={"Sort By"} data={sortByOptions} />
       <RangeSliderComponent />
-      <div className="filter-switch-wrapper">
+      <div className="switch-wrapper">
         <label for="onsale">On sale</label>
         <SwitchComponent />
       </div>
-      <div className="filter-switch-wrapper">
+      <div className="switch-wrapper">
         <label for="instock">In stock</label>
         <SwitchComponent />
       </div>
-      <button type="submit" className="filter-submit">
+      <button type="submit" className="submit">
         Filter
       </button>
     </div>

@@ -7,15 +7,15 @@ const SidebarComponent = ({ isOpen, setIsOpen }) => {
     setIsOpen(false);
   };
   return (
-    <div className={`sidebar ${isOpen ? "open" : ""}`}>
-      <div className="sidebar-container">
-        <button className="sidebar-close" onClick={closeSidebar}>
+    <div className={`sidebar-wrapper ${isOpen ? "open" : ""}`}>
+      <div className="container">
+        <button className="close-btn" onClick={closeSidebar}>
           <BsXLg size="24" />
         </button>
         <div>
-          <h1 className="sidebar-header">Shopping bag</h1>
-          <p className="sidebar-quantity">3 items</p>
-          <div className="sidebar-items">
+          <h1>Shopping bag</h1>
+          <p className="quantity">3 items</p>
+          <div className="items">
             <SidebarItemComponent />
             <SidebarItemComponent />
             <SidebarItemComponent />
@@ -23,13 +23,13 @@ const SidebarComponent = ({ isOpen, setIsOpen }) => {
           </div>
         </div>
       </div>
-      <div className="sidebar-summary">
-        <div className="sidebar-summary-subtotal">
+      <div className="summary">
+        <div className="subtotal">
           <p>Subtotal (3 items)</p>
           <p>$ 112,00</p>
         </div>
         <a href="/cart">
-          <button className="sidebar-summary-cart-button">VIEW CART</button>
+          <button>VIEW CART</button>
         </a>
       </div>
     </div>

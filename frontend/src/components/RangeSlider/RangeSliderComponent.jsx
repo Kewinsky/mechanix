@@ -20,9 +20,9 @@ const RangeSliderComponent = () => {
         value={value}
         onChange={handleChange}
         getAriaValueText={valuetext}
-        className="range__slider-custom"
+        className="slider-custom"
       />
-      <div className="range__slider-price">
+      <div className="slider-price">
         Price: ${value[0]} - ${value[1]}
       </div>
     </div>

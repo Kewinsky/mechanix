@@ -1,6 +1,6 @@
 @import "../../styles/theme.scss";
 
-.quantity-component {
+.quantity-wrapper {
   display: flex;
   width: 100px;
   justify-content: space-between;
@@ -14,7 +14,7 @@
   }
 }
 
-.quantity-button {
+.quantity-wrapper button {
   border: 1px solid $lightGray;
   background-color: $lightGray;
   padding: 17px;
