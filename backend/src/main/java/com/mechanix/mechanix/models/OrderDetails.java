@@ -33,6 +33,8 @@ public class OrderDetails {
 
     private EDelivery delivery;
 
+    private float shipping;
+
     @JsonIgnore
     private LocalDate createdAt;
 
@@ -42,12 +44,12 @@ public class OrderDetails {
         this.createdAt = LocalDate.now();
     }
 
-    public OrderDetails(Long userId, float total, EPaymentType paymentType, EStatus status, EDelivery delivery) {
+    public OrderDetails(Long userId, float total, EPaymentType paymentType, EStatus status, EDelivery delivery, float shipping) {
         this.userId = userId;
         this.total = total;
         this.paymentType = paymentType;
         this.status = status;
         this.delivery = delivery;
+        this.shipping = shipping;
     }
-
 }

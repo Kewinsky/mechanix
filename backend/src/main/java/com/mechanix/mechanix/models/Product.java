@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Entity
@@ -21,14 +22,23 @@ public class Product {
 
     private String name;
 
-    private String description;
+    private String shortDescription;
+
+    private String longDescription;
 
     @Enumerated(EnumType.STRING)
     private ECategory category;
 
     private float price;
 
-    private Long discountId;
+    @ElementCollection
+    private List<String> specification;
+
+    @ElementCollection
+    private List<String> packageContent;
+
+    @ElementCollection
+    private List<String> physicalUnit;
 
     @JsonIgnore
     private LocalDate createdAt;
@@ -38,12 +48,14 @@ public class Product {
         this.createdAt = LocalDate.now();
     }
 
-    public Product(String name, String description, ECategory category, float price, Long discountId) {
+    public Product(String name, String shortDescription, String longDescription, ECategory category, float price, List<String> specification, List<String> packageContent, List<String> physicalUnit) {
         this.name = name;
-        this.description = description;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
         this.category = category;
         this.price = price;
-        this.discountId = discountId;
+        this.specification = specification;
+        this.packageContent = packageContent;
+        this.physicalUnit = physicalUnit;
     }
-
 }

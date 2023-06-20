@@ -20,23 +20,19 @@ public class CustomerAddress {
     @JsonIgnore
     private Long userId;
 
-    private String addressLine1;
-
-    private String addressLine2;
-
-    private String city;
+    private String streetAddress;
 
     private String postalCode;
 
+    private String city;
+
     private String country;
 
-    public CustomerAddress(Long userId, String addressLine1, String addressLine2, String city, String postalCode, String country) {
+    public CustomerAddress(Long userId, String streetAddress, String postalCode, String city, String country) {
         this.userId = userId;
-        this.addressLine1 = addressLine1;
-        this.addressLine2 = addressLine2;
-        this.city = city;
+        this.streetAddress = streetAddress;
         this.postalCode = postalCode;
+        this.city = city;
         this.country = country;
     }
-
 }

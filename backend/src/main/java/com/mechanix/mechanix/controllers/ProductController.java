@@ -15,41 +15,44 @@ public class ProductController {
     @Autowired
     ProductRepository productRepository;
 
-    @GetMapping(path="/getProducts")
+    @GetMapping(path = "/getProducts")
     @ResponseBody
     Iterable<Product> getProducts() {
         return productRepository.findAll();
     }
 
-    @GetMapping(path="/getProductById/{id}")
+    @GetMapping(path = "/getProductById/{id}")
     Product getProductById(@PathVariable Long id) {
         return productRepository.findById(id)
                 .orElseThrow(() -> new ProductNotFoundException(id));
     }
 
-    @PostMapping(path="/addProduct")
+    @PostMapping(path = "/addProduct")
     String addProduct (@RequestBody Product product) {
         productRepository.save(product);
         return "Product added.";
     }
 
-    @PutMapping("updateProduct/{id}")
+    @PutMapping(path = "/updateProduct/{id}")
     String updateProduct(@RequestBody UpdateProduct product,
                          @PathVariable Long id){
         return productRepository.findById(id)
                 .map(product1 -> {
                     product1.setName(product.getName());
-                    product1.setDescription(product.getDescription());
+                    product1.setShortDescription(product.getShortDescription());
+                    product1.setLongDescription(product.getLongDescription());
                     product1.setCategory(product.getCategory());
                     product1.setPrice(product.getPrice());
-                    product1.setDiscountId(product.getDiscountId());
+                    product1.setSpecification(product.getSpecification());
+                    product1.setPackageContent(product.getPackageContent());
+                    product1.setPhysicalUnit(product.getPhysicalUnit());
                     productRepository.save(product1);
                     return "Product updated.";
                 })
                 .orElseThrow(() -> new ProductNotFoundException(id));
     }
 
-    @DeleteMapping("/deleteProduct/{id}")
+    @DeleteMapping(path = "/deleteProduct/{id}")
     String deleteProduct(@PathVariable Long id) {
         if (!productRepository.existsById(id)){
             throw new ProductNotFoundException(id);

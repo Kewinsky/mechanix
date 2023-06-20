@@ -18,6 +18,8 @@ public class Discount {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Long productId;
+
     private String name;
 
     private String description;
@@ -34,7 +36,8 @@ public class Discount {
         this.createdAt = LocalDate.now();
     }
 
-    public Discount(String name, String description, float discountPercent, boolean active) {
+    public Discount(Long productId, String name, String description, float discountPercent, boolean active) {
+        this.productId = productId;
         this.name = name;
         this.description = description;
         this.discountPercent = discountPercent;

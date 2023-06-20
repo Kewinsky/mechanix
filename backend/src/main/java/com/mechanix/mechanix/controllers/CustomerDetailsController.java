@@ -12,25 +12,27 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/customerDetails")
 public class CustomerDetailsController {
 
-    private static final Long  USER_ID = 2L;
+    private static final Long  USER_ID = 1L;
 
     @Autowired
     CustomerDetailsRepository customerDetailsRepository;
 
-    @GetMapping(path="/getDetails")
+    @GetMapping(path = "/getDetails")
     CustomerDetails getDetails() {
         return customerDetailsRepository.findByUserId(USER_ID)
                 .orElseThrow(() -> new DetailsNotFoundException(USER_ID));
     }
 
-    @PostMapping(path="/addDetails")
+    @PostMapping(path = "/addDetails")
     String addDetails (@RequestBody CustomerDetails details) {
         details.setUserId(USER_ID);
+
         customerDetailsRepository.save(details);
+
         return "Customer details added.";
     }
 
-    @PutMapping("updateDetails")
+    @PutMapping(path = "/updateDetails")
     String updateDetails(@RequestBody UpdateDetails details){
         return customerDetailsRepository.findByUserId(USER_ID)
                 .map(details1 -> {
@@ -41,14 +43,5 @@ public class CustomerDetailsController {
                     return "Customer details updated.";
                 })
                 .orElseThrow(() -> new DetailsNotFoundException(USER_ID));
-    }
-
-    @DeleteMapping("/deleteDetails/{id}")
-    String deleteDetails(@PathVariable Long id) {
-        if (!customerDetailsRepository.existsById(id)){
-            throw new DetailsNotFoundException(id);
-        }
-        customerDetailsRepository.deleteById(id);
-        return "Customer details deleted.";
     }
 }

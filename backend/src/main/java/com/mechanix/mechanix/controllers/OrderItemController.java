@@ -17,12 +17,12 @@ public class OrderItemController {
     @Autowired
     OrderItemRepository orderItemRepository;
 
-    @GetMapping(path="/getOrderItems/{id}")
+    @GetMapping(path = "/getOrderItems/{id}")
     Iterable<OrderItem> getOrderItems(@PathVariable Long id) {
         return orderItemRepository.findByOrderId(id);
     }
 
-    @PostMapping(path="/addItem")
+    @PostMapping(path = "/addItem")
     String addItem (@RequestBody OrderItem order) {
         orderItemRepository.save(order);
         return "Order item added.";

@@ -15,25 +15,25 @@ public class DiscountController {
     @Autowired
     DiscountRepository discountRepository;
 
-    @GetMapping(path="/getDiscounts")
+    @GetMapping(path = "/getDiscounts")
     @ResponseBody
     Iterable<Discount> getDiscounts() {
         return discountRepository.findAll();
     }
 
-    @GetMapping(path="/getDiscountById/{id}")
+    @GetMapping(path = "/getDiscountById/{id}")
     Discount getDiscountById(@PathVariable Long id) {
         return discountRepository.findById(id)
                 .orElseThrow(() -> new DiscountNotFoundException(id));
     }
 
-    @PostMapping(path="/addDiscount")
+    @PostMapping(path = "/addDiscount")
     String addDiscount (@RequestBody Discount discount) {
         discountRepository.save(discount);
         return "Discount added.";
     }
 
-    @PutMapping("updateDiscount/{id}")
+    @PutMapping(path = "/updateDiscount/{id}")
     String updateDiscount(@RequestBody UpdateDiscount discount,
                          @PathVariable Long id){
         return discountRepository.findById(id)
@@ -48,7 +48,7 @@ public class DiscountController {
                 .orElseThrow(() -> new DiscountNotFoundException(id));
     }
 
-    @DeleteMapping("/deleteDiscount/{id}")
+    @DeleteMapping(path = "/deleteDiscount/{id}")
     String deleteDiscount(@PathVariable Long id) {
         if (!discountRepository.existsById(id)){
             throw new DiscountNotFoundException(id);

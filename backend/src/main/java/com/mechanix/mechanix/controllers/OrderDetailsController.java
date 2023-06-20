@@ -12,32 +12,32 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/orderDetails")
 public class OrderDetailsController {
 
-    private static final Long  USER_ID = 2L;
+    private static final Long  USER_ID = 1L;
 
     @Autowired
     OrderDetailsRepository orderDetailsRepository;
 
-    @GetMapping(path="/getAllOrders")
+    @GetMapping(path = "/getAllOrders")
     Iterable<OrderDetails> getAllOrders() { return orderDetailsRepository.findAll(); }
 
-    @GetMapping(path="/getOrders")
+    @GetMapping(path = "/getOrders")
     Iterable<OrderDetails> getOrders() { return orderDetailsRepository.findByUserId(USER_ID); }
 
-    @GetMapping(path="/getOrderById/{id}")
+    @GetMapping(path = "/getOrderById/{id}")
     OrderDetails getOrderById(@PathVariable Long id) {
         return orderDetailsRepository.findById(id)
                 .orElseThrow(() -> new OrderDetailsNotFoundException(id));
     }
 
-    @PostMapping(path="/addOrder")
+    @PostMapping(path = "/addOrder")
     String addOrder (@RequestBody OrderDetails order) {
         order.setUserId(USER_ID);
         orderDetailsRepository.save(order);
         return "Order added.";
     }
 
-    @PutMapping("updateOrderStatus")
-    String updateOrderStatus(@RequestBody UpdateOrderStatus details, @PathVariable Long id){
+    @PutMapping(path = "/updateOrderStatus/{id}")
+    String updateOrderStatus(@PathVariable Long id, @RequestBody UpdateOrderStatus details){
         return orderDetailsRepository.findById(id)
                 .map(details1 -> {
                     details1.setStatus(details.getStatus());
@@ -47,7 +47,7 @@ public class OrderDetailsController {
                 .orElseThrow(() -> new OrderDetailsNotFoundException(id));
     }
 
-    @DeleteMapping("/deleteOrder/{id}")
+    @DeleteMapping(path = "/deleteOrder/{id}")
     String deleteOrder(@PathVariable Long id) {
         if (!orderDetailsRepository.existsById(id)){
             throw new OrderDetailsNotFoundException(id);
