@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -15,13 +16,19 @@ public class UpdateProduct {
 
     private String name;
 
-    private String description;
+    private String shortDescription;
+
+    private String longDescription;
 
     @Enumerated(EnumType.STRING)
     private ECategory category;
 
     private float price;
 
-    private Long discountId;
+    private List<String> specification;
+
+    private List<String> packageContent;
+
+    private List<String> physicalUnit;
 
 }

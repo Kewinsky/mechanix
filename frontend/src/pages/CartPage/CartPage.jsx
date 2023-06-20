@@ -48,7 +48,9 @@ const CartPage = () => {
             <p>TOTAL</p>
             <p>$ 112,00</p>
           </div>
-          <button className="submit-button">PROCEED TO CHECKOUT</button>
+          <a href="/checkout">
+            <button className="submit-button">PROCEED TO CHECKOUT</button>
+          </a>
         </div>
       </div>
     </div>

@@ -12,45 +12,37 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/customerAddress")
 public class CustomerAddressController {
 
-    private static final Long  USER_ID = 2L;
+    private static final Long  USER_ID = 1L;
 
     @Autowired
     CustomerAddressRepository customerAddressRepository;
 
-    @GetMapping(path="/getAddress")
+    @GetMapping(path = "/getAddress")
     CustomerAddress getAddress() {
         return customerAddressRepository.findByUserId(USER_ID)
                 .orElseThrow(() -> new AddressNotFoundException(USER_ID));
     }
 
-    @PostMapping(path="/addAddress")
+    @PostMapping(path = "/addAddress")
     String addAddress (@RequestBody CustomerAddress address) {
         address.setUserId(USER_ID);
+
         customerAddressRepository.save(address);
+
         return "Customer address added.";
     }
 
-    @PutMapping("updateAddress")
+    @PutMapping(path = "/updateAddress")
     String updateAddress(@RequestBody UpdateAddress address){
         return customerAddressRepository.findByUserId(USER_ID)
                 .map(address1 -> {
-                    address1.setAddressLine1(address.getAddressLine1());
-                    address1.setAddressLine2(address.getAddressLine2());
-                    address1.setCity(address.getCity());
+                    address1.setStreetAddress(address.getStreetAddress());
                     address1.setPostalCode(address.getPostalCode());
+                    address1.setCity(address.getCity());
                     address1.setCountry(address.getCountry());
                     customerAddressRepository.save(address1);
                     return "Customer address updated.";
                 })
                 .orElseThrow(() -> new AddressNotFoundException(USER_ID));
-    }
-
-    @DeleteMapping("/deleteAddress/{id}")
-    String deleteAddress(@PathVariable Long id) {
-        if (!customerAddressRepository.existsById(id)){
-            throw new AddressNotFoundException(id);
-        }
-        customerAddressRepository.deleteById(id);
-        return "Customer address deleted.";
     }
 }
